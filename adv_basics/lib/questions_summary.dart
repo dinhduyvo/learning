@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsSummary extends StatelessWidget {
@@ -15,6 +14,7 @@ class QuestionsSummary extends StatelessWidget {
         child: Column(
           children: summaryData.map((data) {
             return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                     height: 30,
@@ -28,7 +28,7 @@ class QuestionsSummary extends StatelessWidget {
                             ((data['question_index'] as int) + 1).toString()))),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

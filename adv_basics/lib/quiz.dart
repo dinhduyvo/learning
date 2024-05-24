@@ -18,9 +18,9 @@ class _QuizState extends State<Quiz> {
 
   var activeScreen = 'start-screen';
 
-  void switchScreen() {
+  void switchScreen(screenName) {
     setState(() {
-      activeScreen = 'questions-screen';
+      activeScreen = screenName;
     });
   }
 
@@ -40,6 +40,7 @@ class _QuizState extends State<Quiz> {
 
     switch (activeScreen) {
       case 'start-screen':
+        selectedAnswers = [];
         screenWidget = StartScreen(switchScreen);
         break;
       case 'questions-screen':
@@ -48,6 +49,7 @@ class _QuizState extends State<Quiz> {
       case 'results-screen':
         screenWidget = ResultsScreen(
           chosenAnswers: selectedAnswers,
+          switchScreen: switchScreen,
         );
         break;
       default:
