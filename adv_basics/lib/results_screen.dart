@@ -3,7 +3,8 @@ import 'package:adv_basics/questions_summary.dart';
 import 'package:flutter/material.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers, required this.switchScreen});
+  const ResultsScreen(
+      {super.key, required this.chosenAnswers, required this.switchScreen});
 
   final List<String> chosenAnswers;
   final void Function(String screenName) switchScreen;
@@ -26,9 +27,9 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final numTotalQuestions = questions.length;
-    final numCorrectQuestions = summaryData.where((element) {
-      return element['user_answer'] == element['correct_answer'];
-    }).length;
+    final numCorrectQuestions = summaryData
+        .where((element) => element['user_answer'] == element['correct_answer'])
+        .length;
 
     return SizedBox(
       width: double.infinity,
