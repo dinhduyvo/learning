@@ -24,20 +24,31 @@ class _NewExpenseState extends State<NewExpense> {
   void _submitExpenseData() {
     final enteredAmount = double.tryParse(_amountController.text);
     final amountIsInvalid = enteredAmount == null || enteredAmount <= 0;
-    if (_titleController.text.trim().isEmpty || amountIsInvalid || _selectedDate == null) {
-      showDialog(context: context, builder: (ctx) => AlertDialog(
-        title: const Text('Invalid input'),
-        content: const Text('Please make sure a valid data entered!'),
-        actions: [
-          TextButton(onPressed: () {
-            Navigator.pop(ctx);
-          }, child: const Text('Okay'))
-        ],
-      ));
+    if (_titleController.text.trim().isEmpty ||
+        amountIsInvalid ||
+        _selectedDate == null) {
+      showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+                title: const Text('Invalid input'),
+                content: const Text('Please make sure a valid data entered!'),
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pop(ctx);
+                      },
+                      child: const Text('Okay'))
+                ],
+              ));
       return;
     }
 
-    widget.onAddExpense(Expense(title: _titleController.text, amount: enteredAmount, date: _selectedDate!, category: _selectedCategory));
+    widget.onAddExpense(Expense(
+        title: _titleController.text,
+        amount: enteredAmount,
+        date: _selectedDate!,
+        category: _selectedCategory));
+    Navigator.pop(context);
   }
 
   @override
@@ -97,7 +108,9 @@ class _NewExpenseState extends State<NewExpense> {
               ))
             ],
           ),
-          const SizedBox(height: 16,),
+          const SizedBox(
+            height: 16,
+          ),
           Row(
             children: [
               DropdownButton(
@@ -115,7 +128,7 @@ class _NewExpenseState extends State<NewExpense> {
                       _selectedCategory = value;
                     });
                   }),
-                  const Spacer(),
+              const Spacer(),
               TextButton(
                   onPressed: () {
                     Navigator.pop(context);
