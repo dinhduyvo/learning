@@ -39,7 +39,7 @@ void main() {
                 fontWeight: FontWeight.bold,
                 color: myColorScheme.onSecondaryContainer,
                 fontSize: 16))),
-    themeMode: ThemeMode.dark,
+    themeMode: ThemeMode.system,
     home: const Expenses(),
   ));
 }
