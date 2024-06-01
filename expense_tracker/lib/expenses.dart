@@ -3,6 +3,7 @@ import 'package:expense_tracker/widgets/chart.dart';
 import 'package:expense_tracker/widgets/list/expenses_list.dart';
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -63,6 +64,7 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
 
     Widget mainContent = const Center(
       child: Text('No expense found. Start adding some!'),
@@ -83,9 +85,19 @@ class _ExpensesState extends State<Expenses> {
               onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))
         ],
       ),
-      body: Column(
-        children: [Chart(expenses: _registeredExpenses), Expanded(child: mainContent)],
-      ),
+      body: width < 600
+          ? Column(
+              children: [
+                Chart(expenses: _registeredExpenses),
+                Expanded(child: mainContent)
+              ],
+            )
+          : Row(
+              children: [
+                Expanded(child: Chart(expenses: _registeredExpenses)),
+                Expanded(child: mainContent)
+              ],
+            ),
     );
   }
 }
