@@ -30,8 +30,12 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+        useSafeArea: true,
         isScrollControlled: true,
         context: context,
+        constraints: BoxConstraints.tight(Size(
+            MediaQuery.of(context).size.width,
+            MediaQuery.of(context).size.height)),
         builder: (ctx) => NewExpense(onAddExpense: _addExpense));
   }
 
