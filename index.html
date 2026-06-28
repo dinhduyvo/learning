@@ -49,6 +49,10 @@
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
+                <!-- Hamburger menu button visible only on mobile -->
+                <button onclick="toggleMobileDrawer()" class="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-all mr-1" id="mobile-menu-toggle" title="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
                 <div class="bg-gradient-to-tr from-indigo-500 to-violet-600 p-2.5 rounded-xl shadow-lg shadow-indigo-500/20">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
@@ -71,72 +75,111 @@
         </div>
     </header>
 
+    <!-- Mobile Sidebar Drawer Backdrop -->
+    <div id="sidebar-backdrop" onclick="toggleMobileDrawer()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-45 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+
     <!-- Main Container -->
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-6">
         
         <!-- Progress & Overview Stats Widget -->
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-slate-800/50 rounded-2xl p-5 border border-slate-800">
-            <div class="md:col-span-2">
-                <h2 class="text-lg font-bold mb-1 text-white">Tiến Trình Chinh Phục B2</h2>
-                <p class="text-xs text-slate-400 mb-3">Hoàn thành toàn bộ danh sách để tự tin giao tiếp & lập luận lưu loát.</p>
-                <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-800/40 rounded-2xl p-3 border border-slate-800/80">
+            <div class="col-span-2 flex flex-col justify-center">
+                <div class="flex justify-between items-center mb-1">
+                    <h2 class="text-xs sm:text-sm font-bold text-white">Tiến Trình Chinh Phục</h2>
+                    <span id="progress-percentage" class="text-xs font-semibold text-emerald-400">0%</span>
+                </div>
+                <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
                     <div id="overall-progress-bar" class="bg-gradient-to-r from-emerald-400 to-teal-500 h-full transition-all duration-500" style="width: 0%"></div>
                 </div>
-                <div class="flex justify-between items-center mt-2 text-xs text-slate-400">
-                    <span id="progress-percentage">Hoàn thành: 0%</span>
-                    <span id="progress-numeric">0 / 0 từ</span>
+                <div class="flex justify-between items-center mt-1 text-[10px] text-slate-400">
+                    <span id="progress-numeric">0 / 0 từ đã thuộc</span>
                 </div>
             </div>
             
-            <div class="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-                <div>
-                    <span class="text-xs text-slate-400 block">Đã Thành Thạo</span>
-                    <span id="mastered-count" class="text-2xl font-black text-emerald-400">0</span>
+            <div class="col-span-1 flex items-center justify-between p-2 bg-slate-900/40 rounded-xl border border-slate-800/60">
+                <div class="min-w-0">
+                    <span class="text-[9px] text-slate-400 block font-medium truncate">Đã Thành Thạo</span>
+                    <span id="mastered-count" class="text-lg font-bold text-emerald-400 leading-tight">0</span>
                 </div>
-                <div class="bg-emerald-500/10 p-2 rounded-lg text-emerald-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="bg-emerald-500/10 p-1 rounded-lg text-emerald-400 ml-1.5 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
             </div>
 
-            <div class="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-                <div>
-                    <span class="text-xs text-slate-400 block">Cần Ôn Tập</span>
-                    <span id="review-count" class="text-2xl font-black text-amber-400">0</span>
+            <div class="col-span-1 flex items-center justify-between p-2 bg-slate-900/40 rounded-xl border border-slate-800/60">
+                <div class="min-w-0">
+                    <span class="text-[9px] text-slate-400 block font-medium truncate">Cần Ôn Tập</span>
+                    <span id="review-count" class="text-lg font-bold text-amber-400 leading-tight">0</span>
                 </div>
-                <div class="bg-amber-500/10 p-2 rounded-lg text-amber-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="bg-amber-500/10 p-1 rounded-lg text-amber-400 ml-1.5 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
             </div>
         </section>
 
-        <!-- Filtering System -->
-        <div class="flex flex-col sm:flex-row gap-3 justify-between items-center">
-            <div class="flex flex-wrap gap-1.5 p-1 bg-slate-800 rounded-xl w-full sm:w-auto">
-                <button onclick="setCategory('all')" id="tab-all" class="flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 bg-indigo-600 text-white">
-                    Tất Cả (50+)
-                </button>
-                <button onclick="setCategory('management')" id="tab-management" class="flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 text-slate-400 hover:text-white">
-                    Quản Lý (PM)
-                </button>
-                <button onclick="setCategory('tech')" id="tab-tech" class="flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 text-slate-400 hover:text-white">
-                    Công Nghệ (Tech)
-                </button>
-                <button onclick="setCategory('custom')" id="tab-custom" class="flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 text-slate-400 hover:text-white flex items-center justify-center space-x-1">
-                    <span>Cá Nhân</span>
-                    <span id="custom-badge" class="hidden bg-indigo-500 text-[10px] text-white px-1.5 py-0.5 rounded-full">0</span>
-                </button>
-            </div>
+        <!-- Main Content Area: Left Menu Sidebar & Right Workspace -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+            
+            <!-- Left Menu Sidebar / Mobile Drawer -->
+            <aside id="sidebar-drawer" class="fixed lg:static inset-y-0 left-0 w-72 lg:w-auto lg:col-span-1 bg-slate-900 lg:bg-slate-800/40 border-r lg:border border-slate-800 lg:rounded-3xl p-4 flex flex-col gap-5 z-50 lg:z-auto transform -translate-x-full lg:transform-none transition-transform duration-300 ease-in-out">
+                <!-- Mobile Drawer Header -->
+                <div class="flex items-center justify-between lg:hidden border-b border-slate-800 pb-3 mb-1">
+                    <span class="text-sm font-bold text-white uppercase tracking-wider">Danh mục học tập</span>
+                    <button onclick="toggleMobileDrawer()" class="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 px-3 mb-2.5">Danh mục</h3>
+                    <nav class="flex flex-col gap-1">
+                        <button onclick="setCategory('all')" id="tab-all" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 bg-indigo-600 text-white flex items-center space-x-3 w-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                            <span>Tất Cả (150+)</span>
+                        </button>
+                        <button onclick="setCategory('management')" id="tab-management" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 text-slate-400 hover:text-white hover:bg-slate-800/50 flex items-center space-x-3 w-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>Quản Lý (PM)</span>
+                        </button>
+                        <button onclick="setCategory('tech')" id="tab-tech" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 text-slate-400 hover:text-white hover:bg-slate-800/50 flex items-center space-x-3 w-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            <span>Công Nghệ (Tech)</span>
+                        </button>
+                        <button onclick="setCategory('greeting')" id="tab-greeting" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 text-slate-400 hover:text-white hover:bg-slate-800/50 flex items-center space-x-3 w-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            <span>Chào Hỏi (Greeting)</span>
+                        </button>
+                        <button onclick="setCategory('meeting')" id="tab-meeting" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 text-slate-400 hover:text-white hover:bg-slate-800/50 flex items-center space-x-3 w-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <span>Họp Hành (Meeting)</span>
+                        </button>
+                        <button onclick="setCategory('custom')" id="tab-custom" class="text-left text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-150 text-slate-400 hover:text-white hover:bg-slate-800/50 flex items-center justify-between w-full">
+                            <span class="flex items-center space-x-3">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                                <span>Cá Nhân</span>
+                            </span>
+                            <span id="custom-badge" class="hidden bg-indigo-500 text-[10px] text-white px-2 py-0.5 rounded-full font-bold">0</span>
+                        </button>
+                    </nav>
+                </div>
 
-            <!-- Toggle Practice Mode -->
-            <div class="flex items-center space-x-2 bg-slate-800 p-1.5 rounded-xl border border-slate-700 w-full sm:w-auto justify-center">
-                <button onclick="setViewMode('flashcard')" id="mode-flashcard" class="text-xs font-semibold px-4 py-1.5 rounded-lg bg-indigo-500 text-white transition-all">
-                    Thẻ Ghi Nhớ (Flashcard)
-                </button>
-                <button onclick="setViewMode('quiz')" id="mode-quiz" class="text-xs font-semibold px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all">
-                    Trắc Nghiệm (Quiz)
-                </button>
-            </div>
-        </div>
+                <!-- Learning Mode Selector -->
+                <div class="border-t border-slate-800/60 pt-4">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 px-3 mb-2.5">Chế độ học</h3>
+                    <div class="flex flex-col gap-1 bg-slate-900/60 p-1 rounded-2xl border border-slate-800/80">
+                        <button onclick="setViewMode('flashcard')" id="mode-flashcard" class="text-left text-xs font-semibold px-4 py-2.5 rounded-xl bg-indigo-500 text-white transition-all w-full flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <span>Thẻ Ghi Nhớ</span>
+                        </button>
+                        <button onclick="setViewMode('quiz')" id="mode-quiz" class="text-left text-xs font-semibold px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/30 transition-all w-full flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                            <span>Trắc Nghiệm</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Workspace Column (Right) -->
+            <div class="lg:col-span-3">
 
         <!-- Flashcard Learning Workspace -->
         <div id="flashcard-section" class="flex flex-col items-center justify-center py-6">
@@ -297,6 +340,8 @@
             </div>
         </div>
 
+            </div> <!-- End Workspace Column -->
+        </div> <!-- End Grid Layout -->
     </main>
 
     <!-- Custom Word Creator Modal -->
@@ -326,6 +371,8 @@
                         <select id="form-category" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                             <option value="management">Quản Lý</option>
                             <option value="tech">Công Nghệ</option>
+                            <option value="greeting">Chào Hỏi</option>
+                            <option value="meeting">Họp Hành</option>
                         </select>
                     </div>
                     <div>
@@ -367,1015 +414,6 @@
     </footer>
 
     <!-- JS Logic Core -->
-    <script>
-        // 50 High-quality Professional Business and Tech B1->B2 Vocabulary terms
-        const defaultVocabulary = [
-            // ==================== MANAGEMENT / COLLABORATION (25 items) ====================
-            {
-                id: "pm-1",
-                term: "Meet a deadline",
-                ipa: "/miːt ə ˈded.laɪn/",
-                category: "management",
-                definition: "Kịp thời hạn, hoàn thành đúng hạn",
-                context: "Cách diễn đạt chuyên nghiệp thay cho 'finish on time'.",
-                example_en: "We need to work overtime to meet the deadline for this sprint.",
-                example_vi: "Chúng ta cần làm tăng ca để kịp thời hạn cho sprint này."
-            },
-            {
-                id: "pm-2",
-                term: "Fall behind schedule",
-                ipa: "/fɔːl bɪˈhaɪnd ˈʃed.juːl/",
-                category: "management",
-                definition: "Bị trễ/chậm tiến độ so với kế hoạch ban đầu",
-                context: "Thường dùng để giải trình hoặc báo cáo về rủi ro dự án.",
-                example_en: "If anyone is falling behind schedule, please raise a flag in the daily standup.",
-                example_vi: "Nếu ai bị chậm tiến độ, vui lòng báo cáo ngay trong cuộc họp nhanh hàng ngày."
-            },
-            {
-                id: "pm-3",
-                term: "Allocate resources",
-                ipa: "/ˈæl.ə.keɪt rɪˈzɔː.sɪz/",
-                category: "management",
-                definition: "Phân bổ nguồn lực (nhân lực, ngân sách, thiết bị)",
-                context: "Thuật ngữ phổ biến khi phân chia và quản lý tài nguyên công việc.",
-                example_en: "We need to allocate more resources to the frontend team to accelerate the launch.",
-                example_vi: "Chúng ta cần phân bổ thêm nhân lực cho nhóm frontend để đẩy nhanh tốc độ ra mắt."
-            },
-            {
-                id: "pm-4",
-                term: "Address an issue",
-                ipa: "/əˈdres ən ˈɪʃ.uː/",
-                category: "management",
-                definition: "Xử lý, đối phó hoặc giải quyết một vấn đề",
-                context: "Trang trọng và học thuật hơn hẳn so với cụm 'solve a problem'.",
-                example_en: "Let's schedule a quick sync meeting to address the server security issue.",
-                example_vi: "Hãy lên lịch một buổi họp đồng bộ nhanh để xử lý vấn đề bảo mật máy chủ."
-            },
-            {
-                id: "pm-5",
-                term: "Identify a bottleneck",
-                ipa: "/aɪˈden.tɪ.faɪ ə ˈbɒt.əl.nek/",
-                category: "management",
-                definition: "Tìm ra điểm nghẽn (nơi cản trở dòng chảy công việc)",
-                context: "Áp dụng trong quản lý luồng quy trình làm việc (workflow) Agile.",
-                example_en: "We need to identify the bottleneck in our current CI/CD deployment pipeline.",
-                example_vi: "Chúng ta cần tìm ra điểm nghẽn trong luồng triển khai CI/CD hiện tại."
-            },
-            {
-                id: "pm-6",
-                term: "Touch base with",
-                ipa: "/tʌtʃ beɪs wɪð/",
-                category: "management",
-                definition: "Liên lạc ngắn hạn/Cập nhật nhanh tình hình với ai đó",
-                context: "Văn phong giao tiếp công sở rất tự nhiên và chuyên nghiệp.",
-                example_en: "I will touch base with the QA team this afternoon to check the testing status.",
-                example_vi: "Tôi sẽ liên lạc nhanh với nhóm QA chiều nay để kiểm tra trạng thái kiểm thử."
-            },
-            {
-                id: "pm-7",
-                term: "Keep someone in the loop",
-                ipa: "/kiːp ˈsʌm.wʌn ɪn ðə luːp/",
-                category: "management",
-                definition: "Giữ cho ai đó nắm được thông tin liên tục về vụ việc",
-                context: "Dùng để nhắc nhở đồng nghiệp cập nhật tiến triển cho mình hoặc sếp.",
-                example_en: "Please keep me in the loop regarding the client's latest feedback on the UI.",
-                example_vi: "Vui lòng giữ tôi được cập nhật thông tin về phản hồi mới nhất của khách hàng về UI."
-            },
-            {
-                id: "pm-8",
-                term: "Feasibility study",
-                ipa: "/ˌfiː.zəˈbɪl.ə.ti ˈstʌd.i/",
-                category: "management",
-                definition: "Báo cáo hoặc cuộc nghiên cứu tính khả thi",
-                context: "Khái niệm tiền dự án để quyết định xem có nên triển khai hay không.",
-                example_en: "Before adopting this new technology, we must conduct a thorough feasibility study.",
-                example_vi: "Trước khi áp dụng công nghệ mới này, chúng ta phải tiến hành nghiên cứu tính khả thi kỹ lưỡng."
-            },
-            {
-                id: "pm-9",
-                term: "Put something on hold",
-                ipa: "/pʊt ˈsʌm.θɪŋ ɒn həʊld/",
-                category: "management",
-                definition: "Tạm dừng, hoãn lại một dự án hoặc công việc",
-                context: "Dùng khi một đầu việc bị hoãn do thiếu ngân sách hoặc thay đổi kế hoạch.",
-                example_en: "Due to budget constraints, management decided to put the marketing campaign on hold.",
-                example_vi: "Do giới hạn về ngân sách, ban quản lý quyết định tạm dừng chiến dịch marketing."
-            },
-            {
-                id: "pm-10",
-                term: "Bring to the table",
-                ipa: "/brɪŋ tuː ðə ˈteɪ.bəl/",
-                category: "management",
-                definition: "Đóng góp giá trị, kỹ năng hoặc ý tưởng hữu ích",
-                context: "Khen ngợi thế mạnh của đồng nghiệp hoặc định hình giá trị bản thân.",
-                example_en: "She brings years of experience in cloud computing to the table.",
-                example_vi: "Cô ấy đóng góp nhiều năm kinh nghiệm trong lĩnh vực điện toán đám mây cho dự án."
-            },
-            {
-                id: "pm-11",
-                term: "Take the initiative",
-                ipa: "/teɪk ði ɪˈnɪʃ.ə.tɪv/",
-                category: "management",
-                definition: "Chủ động dẫn dắt, tiên phong thực hiện công việc",
-                context: "Một đức tính cực kỳ được đánh giá cao ở môi trường B2 công sở.",
-                example_en: "He took the initiative to refactor the legacy code without being asked.",
-                example_vi: "Anh ấy đã chủ động tối ưu lại mã nguồn cũ mà không cần ai yêu cầu."
-            },
-            {
-                id: "pm-12",
-                term: "On the same page",
-                ipa: "/ɒn ðə seɪm peɪdʒ/",
-                category: "management",
-                definition: "Đồng thuận, có cùng hiểu biết/thống nhất ý kiến",
-                context: "Cụm từ cửa miệng trong các buổi họp để tránh hiểu lầm.",
-                example_en: "Let's review the requirements once more to ensure we are all on the same page.",
-                example_vi: "Hãy xem lại các yêu cầu một lần nữa để đảm bảo tất cả chúng ta đều thống nhất ý kiến."
-            },
-            {
-                id: "pm-13",
-                term: "Think outside the box",
-                ipa: "/θɪŋk ˌaʊtˈsaɪd ðə bɒks/",
-                category: "management",
-                definition: "Tư duy sáng tạo, đột phá, vượt ngoài lối mòn",
-                context: "Tìm giải pháp mới lạ khi các phương pháp cũ không hiệu quả.",
-                example_en: "To solve this architectural issue, we need to think outside the box.",
-                example_vi: "Để giải quyết vấn đề kiến trúc này, chúng ta cần tư duy vượt ngoài lối mòn."
-            },
-            {
-                id: "pm-14",
-                term: "Keep track of",
-                ipa: "/kiːp træk ɒv/",
-                category: "management",
-                definition: "Theo dõi sát sao tiến độ hoặc sự thay đổi",
-                context: "Dùng cho việc giám sát task, dữ liệu hoặc tiến độ dự án.",
-                example_en: "Using Jira makes it much easier to keep track of tasks and milestones.",
-                example_vi: "Sử dụng Jira giúp việc theo dõi sát sao các tác vụ và cột mốc dễ dàng hơn nhiều."
-            },
-            {
-                id: "pm-15",
-                term: "In the long run",
-                ipa: "/ɪn ðə lɒŋ rʌn/",
-                category: "management",
-                definition: "Về lâu về dài, trong dài hạn",
-                context: "Khi phân tích lợi ích lâu dài của một quyết định/giải pháp.",
-                example_en: "Investing in automated tests will save us a lot of time in the long run.",
-                example_vi: "Đầu tư vào kiểm thử tự động sẽ tiết kiệm cho chúng ta rất nhiều thời gian về lâu về dài."
-            },
-            {
-                id: "pm-16",
-                term: "Play a key role in",
-                ipa: "/pleɪ eɪ kiː rəʊl ɪn/",
-                category: "management",
-                definition: "Đóng vai trò then chốt/chủ chốt trong",
-                context: "Khẳng định sự đóng góp cực kỳ quan trọng của một cá nhân hay yếu tố.",
-                example_en: "The DevOps team played a key role in stabilizing our deployment pipeline.",
-                example_vi: "Nhóm DevOps đóng vai trò then chốt trong việc làm ổn định luồng triển khai của chúng ta."
-            },
-            {
-                id: "pm-17",
-                term: "Mitigate risks",
-                ipa: "/ˈmɪt.ɪ.ɡeɪt rɪsks/",
-                category: "management",
-                definition: "Giảm thiểu rủi ro cho dự án hoặc hệ thống",
-                context: "Khái niệm cực kỳ quan trọng trong quản lý chất lượng (Risk Management).",
-                example_en: "We should run multiple test scenarios to mitigate risks before the major release.",
-                example_vi: "Chúng ta nên chạy nhiều kịch bản kiểm thử để giảm thiểu rủi ro trước phiên bản phát hành lớn."
-            },
-            {
-                id: "pm-18",
-                term: "Reach a consensus",
-                ipa: "/riːtʃ ə kənˈsen.səs/",
-                category: "management",
-                definition: "Đạt được sự đồng thuận/nhất trí chung cả đội",
-                context: "Trang trọng hơn rất nhiều so với cụm từ 'agree with each other'.",
-                example_en: "After arguing for two hours, the stakeholders finally reached a consensus.",
-                example_vi: "Sau hai tiếng tranh luận, các bên liên quan cuối cùng đã đạt được sự đồng thuận chung."
-            },
-            {
-                id: "pm-19",
-                term: "Streamline a process",
-                ipa: "/ˈstriːm.laɪn ə ˈprəʊ.ses/",
-                category: "management",
-                definition: "Tối giản hóa quy trình để tăng hiệu suất",
-                context: "Loại bỏ những bước trung gian rườm rà không cần thiết.",
-                example_en: "The company aims to streamline the onboarding process for new developers.",
-                example_vi: "Công ty đặt mục tiêu tối giản hóa quy trình gia nhập của các lập trình viên mới."
-            },
-            {
-                id: "pm-20",
-                term: "Take ownership of",
-                ipa: "/teɪk ˈəʊ.nə.ʃɪp ɒv/",
-                category: "management",
-                definition: "Chịu trách nhiệm hoàn toàn đối với công việc",
-                context: "Tự giác làm chủ công việc từ đầu đến cuối mà không cần nhắc nhở.",
-                example_en: "Every developer should take ownership of the code they write.",
-                example_vi: "Mỗi lập trình viên nên chịu trách nhiệm hoàn toàn đối với đoạn mã nguồn họ viết."
-            },
-            {
-                id: "pm-21",
-                term: "Drive results",
-                ipa: "/draɪv rɪˈzʌlts/",
-                category: "management",
-                definition: "Thúc đẩy tiến trình để đạt được kết quả cụ thể",
-                context: "Cụm từ nhấn mạnh năng lực hành động hướng đến mục tiêu thực tế.",
-                example_en: "We need a strong project manager who can organize the team and drive results.",
-                example_vi: "Chúng ta cần một quản lý dự án giỏi, người có thể tổ chức nhóm và thúc đẩy đạt kết quả."
-            },
-            {
-                id: "pm-22",
-                term: "Leverage assets",
-                ipa: "/ˈliː.vər.ɪdʒ ˈæs.ets/",
-                category: "management",
-                definition: "Tận dụng tối đa các tài nguyên, thế mạnh sẵn có",
-                context: "Chiến thuật dùng nguồn lực cũ để tạo ra giá trị mới hiệu quả hơn.",
-                example_en: "To stay competitive, we must leverage our existing internal API assets.",
-                example_vi: "Để giữ vững tính cạnh tranh, chúng ta phải tận dụng tối đa các tài sản API nội bộ sẵn có."
-            },
-            {
-                id: "pm-23",
-                term: "Core competency",
-                ipa: "/kɔː ˈkɒm.pɪ.tən.si/",
-                category: "management",
-                definition: "Năng lực cốt lõi (thế mạnh nổi trội nhất)",
-                context: "Thường dùng để nói về ưu thế cạnh tranh của cá nhân hoặc công ty.",
-                example_en: "Building highly scalable backend systems is our company's core competency.",
-                example_vi: "Xây dựng các hệ thống backend có khả năng mở rộng cao là năng lực cốt lõi của công ty chúng tôi."
-            },
-            {
-                id: "pm-24",
-                term: "Best practice",
-                ipa: "/best ˈpræk.tɪs/",
-                category: "management",
-                definition: "Phương pháp tối ưu nhất đã được kiểm chứng thành công",
-                context: "Quy chuẩn chuẩn mực được giới chuyên môn khuyên dùng.",
-                example_en: "Writing self-documenting code is a well-known best practice in software engineering.",
-                example_vi: "Viết mã nguồn tự giải thích là một phương pháp tối ưu đã được kiểm chứng nổi tiếng trong công nghệ phần mềm."
-            },
-            {
-                id: "pm-25",
-                term: "Pain point",
-                ipa: "/peɪn pɔɪnt/",
-                category: "management",
-                definition: "Điểm đau (khó khăn, bất tiện lớn nhất của khách hàng)",
-                context: "Khái niệm cực kỳ quan trọng khi nghiên cứu sản phẩm & tìm giải pháp bán hàng.",
-                example_en: "The slow checkout process is the primary pain point for users of this e-commerce app.",
-                example_vi: "Quá trình thanh toán chậm chạp là điểm đau lớn nhất đối với người dùng ứng dụng thương mại điện tử này."
-            },
-
-            // ==================== TECH & PRODUCT (25 items) ====================
-            {
-                id: "tech-1",
-                term: "Gather requirements",
-                ipa: "/ˈɡæð.ər rɪˈkwaɪə.mənts/",
-                category: "tech",
-                definition: "Thu thập các yêu cầu nghiệp vụ hệ thống",
-                context: "Quy trình thiết yếu của Business Analyst (BA) hoặc Product Owner.",
-                example_en: "Our Product Manager is gathering system requirements for the payment integration.",
-                example_vi: "Quản lý sản phẩm của chúng tôi đang thu thập các yêu cầu hệ thống cho việc tích hợp thanh toán."
-            },
-            {
-                id: "tech-2",
-                term: "Optimize performance",
-                ipa: "/ˈɒp.tɪ.maɪz pəˈfɔː.məns/",
-                category: "tech",
-                definition: "Tối ưu hóa hiệu năng phần mềm/ứng dụng",
-                context: "Dùng khi cải thiện tốc độ tải hoặc độ ổn định của hệ thống.",
-                example_en: "We should refactor this database query to optimize application's performance.",
-                example_vi: "Chúng ta nên cấu trúc lại câu truy vấn cơ sở dữ liệu này để tối ưu hóa hiệu năng ứng dụng."
-            },
-            {
-                id: "tech-3",
-                term: "Seamless integration",
-                ipa: "/ˈsiːm.ləs ˌɪn.tɪˈɡreɪ.ʃən/",
-                category: "tech",
-                definition: "Sự tích hợp mượt mà, không gặp chướng ngại",
-                context: "Bao gồm mượt mà ở giao diện người dùng và hoạt động trơn tru ở backend.",
-                example_en: "The ultimate goal is to ensure a seamless integration between our platform and the CRM.",
-                example_vi: "Mục tiêu tối thượng là đảm bảo sự tích hợp mượt mà giữa nền tảng của chúng ta và hệ thống CRM."
-            },
-            {
-                id: "tech-4",
-                term: "Deploy to production",
-                ipa: "/dɪˈplɔɪ tuː prəˈdʌk.ʃən/",
-                category: "tech",
-                definition: "Đưa mã nguồn/tính năng lên môi trường thực tế",
-                context: "Môi trường 'Production' là nơi người dùng thật trải nghiệm sản phẩm.",
-                example_en: "The critical hotfix has been verified and is ready to deploy to production.",
-                example_vi: "Bản sửa lỗi khẩn cấp quan trọng đã được xác minh và sẵn sàng đưa lên môi trường thực tế."
-            },
-            {
-                id: "tech-5",
-                term: "Technical debt",
-                ipa: "/ˈtek.nɪ.kəl det/",
-                category: "tech",
-                definition: "Nợ kỹ thuật (Code ẩu để kịp tiến độ, gây gánh nặng sau này)",
-                context: "Một khái niệm cực hay để giải thích với quản lý lý do cần cấu trúc lại code.",
-                example_en: "Ignoring code quality now will accumulate technical debt that we will pay for later.",
-                example_vi: "Bỏ qua chất lượng mã nguồn lúc này sẽ tích tụ nợ kỹ thuật mà chúng ta phải trả giá về sau."
-            },
-            {
-                id: "tech-6",
-                term: "Scalable architecture",
-                ipa: "/ˈskeɪ.lə.bəl ˈɑː.kɪ.tek.tʃər/",
-                category: "tech",
-                definition: "Kiến trúc hệ thống có khả năng mở rộng tốt",
-                context: "Để hệ thống gánh được lượng truy cập cực khủng mà không đổ vỡ.",
-                example_en: "We need a highly scalable architecture to support millions of concurrent active users.",
-                example_vi: "Chúng ta cần một kiến trúc có khả năng mở rộng cao để hỗ trợ hàng triệu người dùng hoạt động đồng thời."
-            },
-            {
-                id: "tech-7",
-                term: "Data synchronization",
-                ipa: "/ˈdeɪ.tə ˌsɪŋ.krə.naɪˈzeɪ.ʃən/",
-                category: "tech",
-                definition: "Quy trình đồng bộ hóa dữ liệu",
-                context: "Thường dùng khi thảo luận về các hệ thống cloud, offline sync hoặc đa máy chủ.",
-                example_en: "The developers fixed the bug causing latency during data synchronization.",
-                example_vi: "Các lập trình viên đã sửa lỗi gây ra sự chậm trễ trong quá trình đồng bộ hóa dữ liệu."
-            },
-            {
-                id: "tech-8",
-                term: "User-friendly interface",
-                ipa: "/ˈjuː.zər ˈfrend.li ˈɪn.tə.feɪs/",
-                category: "tech",
-                definition: "Giao diện thân thiện, dễ sử dụng cho người dùng",
-                context: "Khi thảo luận về UX/UI của sản phẩm.",
-                example_en: "Our primary design objective is to build a modern and user-friendly interface.",
-                example_vi: "Mục tiêu thiết kế hàng đầu của chúng tôi là xây dựng một giao diện hiện đại và thân thiện với người dùng."
-            },
-            {
-                id: "tech-9",
-                term: "Backward compatibility",
-                ipa: "/ˈbæk.wəd kəmˌpæt.əˈbɪl.ə.ti/",
-                category: "tech",
-                definition: "Khả năng tương thích ngược với phiên bản cũ",
-                context: "Giúp phần mềm mới vẫn chạy tốt các tệp tin hoặc thư viện của bản cũ.",
-                example_en: "We must ensure backward compatibility so older clients don't experience crashes.",
-                example_vi: "Chúng ta phải đảm bảo khả năng tương thích ngược để các ứng dụng khách cũ hơn không gặp lỗi sập hệ thống."
-            },
-            {
-                id: "tech-10",
-                term: "Cross-functional team",
-                ipa: "/krɒs ˈfʌŋk.ʃən.əl tiːm/",
-                category: "tech",
-                definition: "Đội ngũ liên chức năng (Nhiều chuyên môn phối hợp)",
-                context: "Bao gồm Dev, QA, Design, BA cùng làm việc chung trong 1 team dự án.",
-                example_en: "Working in a cross-functional team helps bridge the gap between design and development.",
-                example_vi: "Làm việc trong một đội ngũ liên chức năng giúp thu hẹp khoảng cách giữa thiết kế và phát triển."
-            },
-            {
-                id: "tech-11",
-                term: "Refactor code",
-                ipa: "/ˌriːˈfæk.tər kəʊd/",
-                category: "tech",
-                definition: "Tối ưu, cấu trúc lại mã nguồn mà không đổi tính năng ngoại vi",
-                context: "Giúp code sạch hơn, dễ bảo trì hơn và giảm nợ kỹ thuật.",
-                example_en: "Before writing new features, we should refactor code in the auth controller.",
-                example_vi: "Trước khi viết tính năng mới, chúng ta nên tối ưu lại mã nguồn trong phần điều khiển xác thực."
-            },
-            {
-                id: "tech-12",
-                term: "High availability",
-                ipa: "/haɪ əˌveɪ.ləˈbɪl.ə.ti/",
-                category: "tech",
-                definition: "Tính sẵn sàng cao của hệ thống (Rất ít khi bị sập/chết máy)",
-                context: "Được thiết kế dự phòng để ứng dụng trực tuyến gần như 100% thời gian.",
-                example_en: "Using load balancers is key to achieving high availability for the cloud app.",
-                example_vi: "Sử dụng bộ cân bằng tải là chìa khóa để đạt được tính sẵn sàng cao cho ứng dụng đám mây."
-            },
-            {
-                id: "tech-13",
-                term: "Proof of concept (POC)",
-                ipa: "/pruːf ɒv ˈkɒn.sept/",
-                category: "tech",
-                definition: "Bản thử nghiệm chứng minh ý tưởng khả thi",
-                context: "Bản demo thô để xác minh giải pháp kỹ thuật có hoạt động thực tế hay không.",
-                example_en: "We need a quick proof of concept before investing three months in this tool.",
-                example_vi: "Chúng ta cần một bản thử nghiệm tính khả thi nhanh trước khi đầu tư ba tháng vào công cụ này."
-            },
-            {
-                id: "tech-14",
-                term: "Technical specification",
-                ipa: "/ˈtek.nɪ.kəl ˌspes.ɪ.fɪˈkeɪ.ʃən/",
-                category: "tech",
-                definition: "Tài liệu đặc tả kỹ thuật chi tiết",
-                context: "Tài liệu chỉ dẫn cho lập trình viên về kiến trúc, API và cấu trúc dữ liệu.",
-                example_en: "Please read the technical specification carefully before designing the database.",
-                example_vi: "Vui lòng đọc kỹ tài liệu đặc tả kỹ thuật trước khi thiết kế cơ sở dữ liệu."
-            },
-            {
-                id: "tech-15",
-                term: "Roll back",
-                ipa: "/rəʊl bæk/",
-                category: "tech",
-                definition: "Khôi phục lại phiên bản/trạng thái ổn định trước đó",
-                context: "Dùng khi phiên bản mới phát hành gặp sự cố khẩn cấp trên Production.",
-                example_en: "Because the update broke the login system, we had to roll back to version 2.1.",
-                example_vi: "Vì bản cập nhật làm hỏng hệ thống đăng nhập, chúng tôi đã phải khôi phục lại phiên bản 2.1."
-            },
-            {
-                id: "tech-16",
-                term: "Out of the box",
-                ipa: "/aʊt ɒv ðə bɒks/",
-                category: "tech",
-                definition: "Có sẵn dùng được ngay, không cần cấu hình phức tạp",
-                context: "Một công cụ hoặc thư viện đã tích hợp đầy đủ mọi thứ cần thiết từ đầu.",
-                example_en: "This framework provides user authentication out of the box.",
-                example_vi: "Khung phát triển này cung cấp tính năng xác thực người dùng có sẵn dùng được ngay."
-            },
-            {
-                id: "tech-17",
-                term: "Bottleneck analysis",
-                ipa: "/ˈbɒt.əl.nek əˈnæl.ə.sɪs/",
-                category: "tech",
-                definition: "Phân tích điểm nghẽn hệ thống phần mềm",
-                context: "Hành động điều tra nguyên nhân làm chậm luồng xử lý dữ liệu.",
-                example_en: "We ran a bottleneck analysis and discovered that database read speed was the problem.",
-                example_vi: "Chúng tôi đã chạy phân tích điểm nghẽn và phát hiện ra tốc độ đọc cơ sở dữ liệu chính là vấn đề."
-            },
-            {
-                id: "tech-18",
-                term: "Deprecate a feature",
-                ipa: "/ˈdep.rə.keɪt eɪ ˈfiː.tʃər/",
-                category: "tech",
-                definition: "Ngừng hỗ trợ hoặc chuẩn bị loại bỏ một tính năng",
-                context: "Khuyên người dùng đổi sang phương thức mới vì bản cũ sắp bị khai tử.",
-                example_en: "We plan to deprecate this legacy API endpoint in the next release.",
-                example_vi: "Chúng tôi lên kế hoạch ngừng hỗ trợ cổng API cũ này trong đợt phát hành tới."
-            },
-            {
-                id: "tech-19",
-                term: "User acceptance testing (UAT)",
-                ipa: "/ˈjuː.zər əkˈsep.təns ˈtest.ɪŋ/",
-                category: "tech",
-                definition: "Kiểm thử chấp nhận người dùng cuối",
-                context: "Bước kiểm thử cuối cùng do khách hàng thực hiện trước khi bàn giao dự án.",
-                example_en: "The system is currently in UAT, and we expect final approval by Friday.",
-                example_vi: "Hệ thống hiện đang trong giai đoạn kiểm thử chấp nhận (UAT), và chúng tôi kỳ vọng duyệt cuối cùng trước thứ Sáu."
-            },
-            {
-                id: "tech-20",
-                term: "Continuous integration (CI)",
-                ipa: "/kənˈtɪn.ju.əs ˌɪn.tɪˈɡreɪ.ʃən/",
-                category: "tech",
-                definition: "Quy trình tích hợp mã nguồn tự động, liên tục",
-                context: "Tự động build và test mỗi khi lập trình viên đẩy code mới lên.",
-                example_en: "Setting up continuous integration helped us detect bugs much earlier.",
-                example_vi: "Thiết lập quy trình tích hợp liên tục đã giúp chúng tôi phát hiện lỗi sớm hơn nhiều."
-            },
-            {
-                id: "tech-21",
-                term: "Feature parity",
-                ipa: "/ˈfiː.tʃər ˈpær.ə.ti/",
-                category: "tech",
-                definition: "Sự tương đương về tính năng giữa các phiên bản/nền tảng",
-                context: "Ví dụ app trên iOS và Android phải có tính năng hoàn toàn giống nhau.",
-                example_en: "We are striving to achieve feature parity between our web and mobile apps.",
-                example_vi: "Chúng tôi đang nỗ lực để đạt được sự tương đương về tính năng giữa ứng dụng web và di động."
-            },
-            {
-                id: "tech-22",
-                term: "Workaround",
-                ipa: "/ˈwɜːk.ə.raʊnd/",
-                category: "tech",
-                definition: "Giải pháp tạm thời để vượt qua lỗi trước khi có bản vá chính thức",
-                context: "Biện pháp đi đường vòng để giữ hệ thống chạy ổn định ngắn hạn.",
-                example_en: "While the team is working on a permanent fix, here is a temporary workaround.",
-                example_vi: "Trong khi cả đội đang tìm cách sửa lỗi triệt để, đây là giải pháp tạm thời đi đường vòng."
-            },
-            {
-                id: "tech-23",
-                term: "Go-to-market strategy",
-                ipa: "/ɡəʊ tuː ˈmɑː.kɪt ˈstræt.ə.dʒi/",
-                category: "tech",
-                definition: "Chiến lược tiếp cận thị trường của sản phẩm",
-                context: "Kế hoạch chi tiết giới thiệu sản phẩm công nghệ mới tới khách hàng.",
-                example_en: "Our go-to-market strategy focuses heavily on target ads and tech influencers.",
-                example_vi: "Chiến lược tiếp cận thị trường của chúng tôi tập trung mạnh vào quảng cáo mục tiêu và người có sức ảnh hưởng công nghệ."
-            },
-            {
-                id: "tech-24",
-                term: "Agile methodology",
-                ipa: "/ˈædʒ.aɪl ˌmeθ.əˈdɒl.ə.dʒi/",
-                category: "tech",
-                definition: "Phương pháp phát triển phần mềm linh hoạt",
-                context: "Chia nhỏ dự án thành nhiều phần và cải tiến liên tục dựa trên feedback.",
-                example_en: "Adopting Agile methodology has greatly improved our team's communication and speed.",
-                example_vi: "Áp dụng phương pháp Agile đã cải thiện đáng kể giao tiếp và tốc độ của đội ngũ chúng tôi."
-            },
-            {
-                id: "tech-25",
-                term: "Troubleshoot a bug",
-                ipa: "/ˈtrʌb.əl.ʃuːt eɪ bʌɡ/",
-                category: "tech",
-                definition: "Tìm hiểu nguyên nhân sâu xa và khắc phục sự cố lỗi phần mềm",
-                context: "Bao gồm việc phân tích log, tái hiện lỗi và đưa ra hướng xử lý.",
-                example_en: "The senior developer helped me troubleshoot a critical bug in the authentication logic.",
-                example_vi: "Lập trình viên cấp cao đã giúp tôi khắc phục sự cố lỗi nghiêm trọng trong logic xác thực."
-            }
-        ];
-
-        // State storage
-        let vocabularies = [];
-        let filteredVocab = [];
-        let currentCardIndex = 0;
-        let isFlipped = false;
-        let currentCategory = 'all';
-        let currentViewMode = 'flashcard'; // 'flashcard' or 'quiz'
-
-        // Quiz specific state
-        let currentQuizIndex = 0;
-        let quizQuestions = [];
-        let scoreCorrect = 0;
-        let scoreIncorrect = 0;
-        let hasAnsweredCurrentQuiz = false;
-
-        // Initialize App on Window Load
-        window.onload = function() {
-            initDatabase();
-            applyCategoryFilter();
-            renderStats();
-            setupKeyboardShortcuts();
-        };
-
-        // Load data from localStorage or fallback to default
-        function initDatabase() {
-            const storedVocab = localStorage.getItem('b2_booster_vocab_v2');
-            if (storedVocab) {
-                vocabularies = JSON.parse(storedVocab);
-            } else {
-                vocabularies = defaultVocabulary.map(item => ({
-                    ...item,
-                    status: 'new' // 'new', 'review', 'mastered'
-                }));
-                saveToLocalStorage();
-            }
-        }
-
-        function saveToLocalStorage() {
-            localStorage.setItem('b2_booster_vocab_v2', JSON.stringify(vocabularies));
-        }
-
-        // Set visual filter & trigger rerender
-        function setCategory(category) {
-            currentCategory = category;
-            
-            // Adjust styling of tabs
-            const tabs = ['all', 'management', 'tech', 'custom'];
-            tabs.forEach(t => {
-                const btn = document.getElementById(`tab-${t}`);
-                if (t === category) {
-                    btn.className = "flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 bg-indigo-600 text-white";
-                } else {
-                    btn.className = "flex-1 sm:flex-initial text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-150 text-slate-400 hover:text-white";
-                }
-            });
-
-            currentCardIndex = 0;
-            applyCategoryFilter();
-            
-            if (currentViewMode === 'quiz') {
-                startQuizMode();
-            }
-        }
-
-        function setViewMode(mode) {
-            currentViewMode = mode;
-            const cardBtn = document.getElementById('mode-flashcard');
-            const quizBtn = document.getElementById('mode-quiz');
-            const flashSection = document.getElementById('flashcard-section');
-            const quizSection = document.getElementById('quiz-section');
-
-            if (mode === 'flashcard') {
-                cardBtn.className = "text-xs font-semibold px-4 py-1.5 rounded-lg bg-indigo-500 text-white transition-all";
-                quizBtn.className = "text-xs font-semibold px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
-                flashSection.classList.remove('hidden');
-                quizSection.classList.add('hidden');
-                renderCurrentCard();
-            } else {
-                quizBtn.className = "text-xs font-semibold px-4 py-1.5 rounded-lg bg-indigo-500 text-white transition-all";
-                cardBtn.className = "text-xs font-semibold px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
-                flashSection.classList.add('hidden');
-                quizSection.classList.remove('hidden');
-                startQuizMode();
-            }
-        }
-
-        function applyCategoryFilter() {
-            if (currentCategory === 'all') {
-                filteredVocab = vocabularies;
-            } else if (currentCategory === 'custom') {
-                filteredVocab = vocabularies.filter(item => item.id.startsWith('custom-'));
-            } else {
-                filteredVocab = vocabularies.filter(item => item.category === currentCategory);
-            }
-
-            // Update custom badge count
-            const customCount = vocabularies.filter(item => item.id.startsWith('custom-')).length;
-            const badge = document.getElementById('custom-badge');
-            if (customCount > 0) {
-                badge.textContent = customCount;
-                badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
-
-            // Fallback for empty filter
-            if (filteredVocab.length === 0) {
-                currentCardIndex = 0;
-            }
-
-            renderCurrentCard();
-            updateCardCounter();
-        }
-
-        function renderCurrentCard() {
-            const cardEl = document.getElementById('flashcard');
-            // reset flip state
-            isFlipped = false;
-            cardEl.style.transform = "none";
-
-            const frontTerm = document.getElementById('card-front-term');
-            const frontIpa = document.getElementById('card-front-ipa');
-            const frontTag = document.getElementById('card-front-tag');
-
-            const backDef = document.getElementById('card-back-definition');
-            const backContext = document.getElementById('card-back-context');
-            const backExEn = document.getElementById('card-back-example-en');
-            const backExVi = document.getElementById('card-back-example-vi');
-
-            if (filteredVocab.length === 0) {
-                // Empty state card
-                frontTerm.textContent = "Chưa có từ vựng";
-                frontIpa.textContent = "Vui lòng chọn danh mục khác hoặc tự thêm từ mới.";
-                frontTag.textContent = "DANH SÁCH TRỐNG";
-                
-                backDef.textContent = "Không có dữ liệu";
-                backContext.textContent = "";
-                backExEn.textContent = "Nhấn nút 'Thêm từ mới' ở thanh tiêu đề để bắt đầu.";
-                backExVi.textContent = "";
-                return;
-            }
-
-            const activeWord = filteredVocab[currentCardIndex];
-
-            // Render Front Side
-            frontTerm.textContent = activeWord.term;
-            frontIpa.textContent = activeWord.ipa || "";
-            frontTag.textContent = activeWord.category === 'management' ? 'QUẢN LÝ DỰ ÁN (B2)' : 'CÔNG NGHỆ & SẢN PHẨM (B2)';
-            
-            // Adjust size dynamically if term is long
-            if (activeWord.term.length > 20) {
-                frontTerm.classList.remove('text-3xl', 'sm:text-4xl');
-                frontTerm.classList.add('text-2xl', 'sm:text-3xl');
-            } else {
-                frontTerm.classList.remove('text-2xl', 'sm:text-3xl');
-                frontTerm.classList.add('text-3xl', 'sm:text-4xl');
-            }
-
-            // Render Back Side
-            backDef.textContent = activeWord.definition;
-            backContext.textContent = activeWord.context || "";
-            backExEn.textContent = `"${activeWord.example_en}"`;
-            backExVi.textContent = `(${activeWord.example_vi})`;
-        }
-
-        function flipCard() {
-            if (filteredVocab.length === 0) return;
-            const cardEl = document.getElementById('flashcard');
-            isFlipped = !isFlipped;
-            if (isFlipped) {
-                cardEl.style.transform = "rotateY(180deg)";
-            } else {
-                cardEl.style.transform = "rotateY(0deg)";
-            }
-        }
-
-        function prevCard() {
-            if (filteredVocab.length <= 1) return;
-            currentCardIndex = (currentCardIndex - 1 + filteredVocab.length) % filteredVocab.length;
-            renderCurrentCard();
-            updateCardCounter();
-        }
-
-        function nextCard() {
-            if (filteredVocab.length <= 1) return;
-            currentCardIndex = (currentCardIndex + 1) % filteredVocab.length;
-            renderCurrentCard();
-            updateCardCounter();
-        }
-
-        function updateCardCounter() {
-            const indexLabel = document.getElementById('current-card-index');
-            const countLabel = document.getElementById('total-cards-count');
-            
-            if (filteredVocab.length === 0) {
-                indexLabel.textContent = "Thẻ 0";
-                countLabel.textContent = "0";
-            } else {
-                indexLabel.textContent = `Thẻ ${currentCardIndex + 1}`;
-                countLabel.textContent = filteredVocab.length;
-            }
-        }
-
-        // Web Speech synthesis for pronunciation
-        function speakCurrentWord(event) {
-            if (event) event.stopPropagation(); // Avoid flipping the card when clicking the audio icon
-            const currentItem = filteredVocab[currentCardIndex];
-            if (!currentItem) return;
-
-            const utterance = new SpeechSynthesisUtterance(currentItem.term);
-            utterance.lang = 'en-US';
-            utterance.rate = 0.85; // slightly slower for learning clarity
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function speakCurrentExample(event) {
-            if (event) event.stopPropagation();
-            const currentItem = filteredVocab[currentCardIndex];
-            if (!currentItem) return;
-
-            const utterance = new SpeechSynthesisUtterance(currentItem.example_en);
-            utterance.lang = 'en-US';
-            utterance.rate = 0.9;
-            window.speechSynthesis.speak(utterance);
-        }
-
-        // Status tracking & persistence
-        function markCardStatus(status) {
-            if (filteredVocab.length === 0) return;
-            const currentItem = filteredVocab[currentCardIndex];
-            
-            // Find in master list & update status
-            const foundIndex = vocabularies.findIndex(item => item.id === currentItem.id);
-            if (foundIndex !== -1) {
-                vocabularies[foundIndex].status = status;
-                saveToLocalStorage();
-                renderStats();
-                showToast(status === 'mastered' ? 'Đã lưu: Thành thạo 🎉' : 'Đã lưu: Cần ôn tập ⏳');
-                
-                // Automatically progress to next card after a small delay
-                setTimeout(() => {
-                    nextCard();
-                }, 400);
-            }
-        }
-
-        function renderStats() {
-            const total = vocabularies.length;
-            const mastered = vocabularies.filter(item => item.status === 'mastered').length;
-            const review = vocabularies.filter(item => item.status === 'review').length;
-
-            document.getElementById('mastered-count').textContent = mastered;
-            document.getElementById('review-count').textContent = review;
-
-            const percentage = total > 0 ? Math.round((mastered / total) * 100) : 0;
-            document.getElementById('overall-progress-bar').style.width = `${percentage}%`;
-            document.getElementById('progress-percentage').textContent = `Hoàn thành: ${percentage}%`;
-            document.getElementById('progress-numeric').textContent = `${mastered} / ${total} từ`;
-        }
-
-        function setupKeyboardShortcuts() {
-            document.addEventListener('keydown', function(event) {
-                if (currentViewMode !== 'flashcard') return; // Only active in flashcard mode
-                
-                // Exclude shortcut triggers inside input/textarea fields
-                if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.tagName === 'SELECT') {
-                    return;
-                }
-
-                if (event.code === 'Space') {
-                    event.preventDefault(); // prevent scrolling page down
-                    flipCard();
-                } else if (event.code === 'ArrowRight') {
-                    nextCard();
-                } else if (event.code === 'ArrowLeft') {
-                    prevCard();
-                }
-            });
-        }
-
-        // Custom word modal control
-        function openCustomWordModal() {
-            const modal = document.getElementById('custom-word-modal');
-            const container = document.getElementById('modal-container');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                container.classList.remove('scale-95');
-            }, 10);
-        }
-
-        function closeCustomWordModal() {
-            const modal = document.getElementById('custom-word-modal');
-            const container = document.getElementById('modal-container');
-            modal.classList.add('opacity-0');
-            container.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-            document.getElementById('custom-word-form').reset();
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-
-            const term = document.getElementById('form-term').value.trim();
-            const ipa = document.getElementById('form-ipa').value.trim();
-            const category = document.getElementById('form-category').value;
-            const definition = document.getElementById('form-definition').value.trim();
-            const example_en = document.getElementById('form-example-en').value.trim();
-            const example_vi = document.getElementById('form-example-vi').value.trim();
-
-            const newWord = {
-                id: `custom-${Date.now()}`,
-                term,
-                ipa,
-                category,
-                definition,
-                context: "Tự định nghĩa theo môi trường công sở cá nhân.",
-                example_en,
-                example_vi,
-                status: 'new'
-            };
-
-            vocabularies.push(newWord);
-            saveToLocalStorage();
-            renderStats();
-            applyCategoryFilter();
-            closeCustomWordModal();
-            showToast("Đã lưu thẻ tự thiết kế thành công!");
-        }
-
-        // Quiz System Integration
-        function startQuizMode() {
-            scoreCorrect = 0;
-            scoreIncorrect = 0;
-            currentQuizIndex = 0;
-            updateQuizScore();
-
-            if (filteredVocab.length < 4) {
-                // Must have at least 4 items for options
-                document.getElementById('quiz-options-container').innerHTML = `
-                    <div class="text-center py-6 text-slate-400">
-                        <p class="font-medium">Chưa đủ dữ liệu làm bài!</p>
-                        <p class="text-xs mt-1">Cần tối thiểu ít nhất 4 từ trong danh mục này để tạo đề kiểm tra.</p>
-                    </div>
-                `;
-                document.getElementById('quiz-question-title').textContent = "Không thể tạo câu hỏi";
-                document.getElementById('quiz-next-btn').classList.add('hidden');
-                document.getElementById('quiz-question-index').textContent = "LỖI";
-                return;
-            }
-
-            // Shuffle cards subset to generate random question queue (5 Questions round)
-            quizQuestions = [...filteredVocab].sort(() => 0.5 - Math.random()).slice(0, 5); 
-            generateQuizQuestion();
-        }
-
-        function generateQuizQuestion() {
-            hasAnsweredCurrentQuiz = false;
-            document.getElementById('quiz-feedback').innerHTML = "";
-            document.getElementById('quiz-next-btn').classList.add('hidden');
-
-            const currentQuestion = quizQuestions[currentQuizIndex];
-            document.getElementById('quiz-question-index').textContent = `CÂU HỎI ${currentQuizIndex + 1}/${quizQuestions.length}`;
-            
-            // Randomly decide format: 1 (Provide Vn definition -> Choose En term) or 2 (Provide En Example with blank -> Choose En term)
-            const isDefinitionPrompt = Math.random() > 0.4;
-            
-            if (isDefinitionPrompt) {
-                document.getElementById('quiz-prompt-helper').textContent = "Chọn cụm từ tiếng Anh thích hợp cho nghĩa:";
-                document.getElementById('quiz-question-title').textContent = `"${currentQuestion.definition}"`;
-            } else {
-                document.getElementById('quiz-prompt-helper').textContent = "Chọn cụm từ thích hợp nhất để điền vào chỗ trống:";
-                // Replace term with blanks, case insensitive
-                const escapedTerm = currentQuestion.term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-                const blankedSentence = currentQuestion.example_en.replace(new RegExp(escapedTerm, 'gi'), "________");
-                document.getElementById('quiz-question-title').textContent = `"${blankedSentence}"`;
-            }
-
-            // Prepare incorrect options from the same category
-            let pool = vocabularies.filter(item => item.id !== currentQuestion.id);
-            if (pool.length < 3) {
-                pool = defaultVocabulary.filter(item => item.term !== currentQuestion.term);
-            }
-            const incorrectOptions = pool.sort(() => 0.5 - Math.random()).slice(0, 3);
-            
-            // Mix options together
-            const allOptions = [currentQuestion, ...incorrectOptions].sort(() => 0.5 - Math.random());
-
-            // Render options
-            const optionsContainer = document.getElementById('quiz-options-container');
-            optionsContainer.innerHTML = "";
-
-            allOptions.forEach((option, idx) => {
-                const optionLabel = String.fromCharCode(65 + idx); // A, B, C, D
-                const button = document.createElement('button');
-                button.className = "w-full text-left p-4 rounded-xl bg-slate-800 hover:bg-slate-755 border border-slate-700/60 transition-all duration-150 text-slate-200 hover:text-white text-sm font-medium flex items-center justify-between";
-                button.innerHTML = `
-                    <span><b>${optionLabel}.</b> ${option.term}</span>
-                    <div class="w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center text-xs"></div>
-                `;
-                button.onclick = () => selectQuizOption(button, option.id === currentQuestion.id, currentQuestion.term);
-                optionsContainer.appendChild(button);
-            });
-        }
-
-        function selectQuizOption(selectedButton, isCorrect, correctTerm) {
-            if (hasAnsweredCurrentQuiz) return;
-            hasAnsweredCurrentQuiz = true;
-
-            const optionsContainer = document.getElementById('quiz-options-container');
-            const buttons = optionsContainer.getElementsByTagName('button');
-
-            // Apply visual feedback colors
-            for (let btn of buttons) {
-                btn.disabled = true; // prevent multi clicks
-                
-                // Extract if it's correct
-                const text = btn.innerText;
-                const matchesCorrect = text.includes(correctTerm);
-
-                if (matchesCorrect) {
-                    btn.className = "w-full text-left p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 text-sm font-medium flex items-center justify-between";
-                    btn.querySelector('div').className = "w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500 flex items-center justify-center text-xs font-bold";
-                    btn.querySelector('div').innerHTML = "✓";
-                } else if (btn === selectedButton && !isCorrect) {
-                    btn.className = "w-full text-left p-4 rounded-xl bg-rose-500/10 border border-rose-500/40 text-rose-400 text-sm font-medium flex items-center justify-between";
-                    btn.querySelector('div').className = "w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500 flex items-center justify-center text-xs font-bold";
-                    btn.querySelector('div').innerHTML = "✗";
-                }
-            }
-
-            const feedbackEl = document.getElementById('quiz-feedback');
-            if (isCorrect) {
-                scoreCorrect++;
-                feedbackEl.innerHTML = `<span class="text-emerald-400">Chính xác! Làm tốt lắm. 👍</span>`;
-                try { speakTextFeedback("Correct"); } catch(e){}
-            } else {
-                scoreIncorrect++;
-                feedbackEl.innerHTML = `<span class="text-rose-400">Chưa chính xác. Ôn kỹ nhé!</span>`;
-            }
-
-            updateQuizScore();
-            document.getElementById('quiz-next-btn').classList.remove('hidden');
-        }
-
-        function speakTextFeedback(text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-US';
-            utterance.volume = 0.3;
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function generateNextQuizQuestion() {
-            currentQuizIndex++;
-            if (currentQuizIndex < quizQuestions.length) {
-                generateQuizQuestion();
-            } else {
-                // End of quiz round
-                const scorePercent = Math.round((scoreCorrect / quizQuestions.length) * 100);
-                document.getElementById('quiz-question-index').textContent = "KẾT QUẢ CUỐI CÙNG";
-                document.getElementById('quiz-question-title').innerHTML = `
-                    <div class="text-center py-4">
-                        <span class="text-4xl">🏆</span>
-                        <h4 class="text-2xl font-extrabold text-white mt-2">Hoàn Thành Quiz!</h4>
-                        <p class="text-slate-400 mt-1 text-sm">Điểm số chính xác của bạn là:</p>
-                        <p class="text-3xl font-black text-indigo-400 mt-2">${scorePercent}% (${scoreCorrect}/${quizQuestions.length})</p>
-                    </div>
-                `;
-                document.getElementById('quiz-options-container').innerHTML = "";
-                document.getElementById('quiz-feedback').innerHTML = "";
-                
-                // Show retry button instead of next button
-                const nextBtn = document.getElementById('quiz-next-btn');
-                nextBtn.textContent = "Làm vòng mới";
-                nextBtn.onclick = () => {
-                    nextBtn.textContent = "Tiếp theo";
-                    nextBtn.onclick = generateNextQuizQuestion;
-                    startQuizMode();
-                };
-            }
-        }
-
-        function updateQuizScore() {
-            document.getElementById('quiz-score').textContent = `Đúng: ${scoreCorrect} | Sai: ${scoreIncorrect}`;
-        }
-
-        // Utility Toast notification
-        function showToast(message) {
-            const toast = document.getElementById('toast-message');
-            document.getElementById('toast-text').textContent = message;
-            
-            toast.classList.remove('translate-y-24', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-            
-            setTimeout(() => {
-                toast.classList.add('translate-y-24', 'opacity-0');
-                toast.classList.remove('translate-y-0', 'opacity-100');
-            }, 3000);
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

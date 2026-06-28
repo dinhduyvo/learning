@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "pm-1",
+    "term": "Meet a deadline",
+    "ipa": "/miːt ə ˈded.laɪn/",
+    "category": "management",
+    "definition": "Kịp thời hạn, hoàn thành đúng hạn",
+    "context": "Cách diễn đạt chuyên nghiệp thay cho 'finish on time'.",
+    "example_en": "We need to work overtime to meet the deadline for this sprint.",
+    "example_vi": "Chúng ta cần làm tăng ca để kịp thời hạn cho sprint này."
+  },
+  {
+    "id": "pm-2",
+    "term": "Fall behind schedule",
+    "ipa": "/fɔːl bɪˈhaɪnd ˈʃed.juːl/",
+    "category": "management",
+    "definition": "Bị trễ/chậm tiến độ so với kế hoạch ban đầu",
+    "context": "Thường dùng để giải trình hoặc báo cáo về rủi ro dự án.",
+    "example_en": "If anyone is falling behind schedule, please raise a flag in the daily standup.",
+    "example_vi": "Nếu ai bị chậm tiến độ, vui lòng báo cáo ngay trong cuộc họp nhanh hàng ngày."
+  },
+  {
+    "id": "pm-3",
+    "term": "Allocate resources",
+    "ipa": "/ˈæl.ə.keɪt rɪˈzɔː.sɪz/",
+    "category": "management",
+    "definition": "Phân bổ nguồn lực (nhân lực, ngân sách, thiết bị)",
+    "context": "Thuật ngữ phổ biến khi phân chia và quản lý tài nguyên công việc.",
+    "example_en": "We need to allocate more resources to the frontend team to accelerate the launch.",
+    "example_vi": "Chúng ta cần phân bổ thêm nhân lực cho nhóm frontend để đẩy nhanh tốc độ ra mắt."
+  },
+  {
+    "id": "pm-4",
+    "term": "Address an issue",
+    "ipa": "/əˈdres ən ˈɪʃ.uː/",
+    "category": "management",
+    "definition": "Xử lý, đối phó hoặc giải quyết một vấn đề",
+    "context": "Trang trọng và học thuật hơn hẳn so với cụm 'solve a problem'.",
+    "example_en": "Let's schedule a quick sync meeting to address the server security issue.",
+    "example_vi": "Hãy lên lịch một buổi họp đồng bộ nhanh để xử lý vấn đề bảo mật máy chủ."
+  },
+  {
+    "id": "pm-5",
+    "term": "Identify a bottleneck",
+    "ipa": "/aɪˈden.tɪ.faɪ ə ˈbɒt.əl.nek/",
+    "category": "management",
+    "definition": "Tìm ra điểm nghẽn (nơi cản trở dòng chảy công việc)",
+    "context": "Áp dụng trong quản lý luồng quy trình làm việc (workflow) Agile.",
+    "example_en": "We need to identify the bottleneck in our current CI/CD deployment pipeline.",
+    "example_vi": "Chúng ta cần tìm ra điểm nghẽn trong luồng triển khai CI/CD hiện tại."
+  },
+  {
+    "id": "pm-6",
+    "term": "Touch base with",
+    "ipa": "/tʌtʃ beɪs wɪð/",
+    "category": "management",
+    "definition": "Liên lạc ngắn hạn/Cập nhật nhanh tình hình với ai đó",
+    "context": "Văn phong giao tiếp công sở rất tự nhiên và chuyên nghiệp.",
+    "example_en": "I will touch base with the QA team this afternoon to check the testing status.",
+    "example_vi": "Tôi sẽ liên lạc nhanh với nhóm QA chiều nay để kiểm tra trạng thái kiểm thử."
+  },
+  {
+    "id": "pm-7",
+    "term": "Keep someone in the loop",
+    "ipa": "/kiːp ˈsʌm.wʌn ɪn ðə luːp/",
+    "category": "management",
+    "definition": "Giữ cho ai đó nắm được thông tin liên tục về vụ việc",
+    "context": "Dùng để nhắc nhở đồng nghiệp cập nhật tiến triển cho mình hoặc sếp.",
+    "example_en": "Please keep me in the loop regarding the client's latest feedback on the UI.",
+    "example_vi": "Vui lòng giữ tôi được cập nhật thông tin về phản hồi mới nhất của khách hàng về UI."
+  },
+  {
+    "id": "pm-8",
+    "term": "Feasibility study",
+    "ipa": "/ˌfiː.zəˈbɪl.ə.ti ˈstʌd.i/",
+    "category": "management",
+    "definition": "Báo cáo hoặc cuộc nghiên cứu tính khả thi",
+    "context": "Khái niệm tiền dự án để quyết định xem có nên triển khai hay không.",
+    "example_en": "Before adopting this new technology, we must conduct a thorough feasibility study.",
+    "example_vi": "Trước khi áp dụng công nghệ mới này, chúng ta phải tiến hành nghiên cứu tính khả thi kỹ lưỡng."
+  },
+  {
+    "id": "pm-9",
+    "term": "Put something on hold",
+    "ipa": "/pʊt ˈsʌm.θɪŋ ɒn həʊld/",
+    "category": "management",
+    "definition": "Tạm dừng, hoãn lại một dự án hoặc công việc",
+    "context": "Dùng khi một đầu việc bị hoãn do thiếu ngân sách hoặc thay đổi kế hoạch.",
+    "example_en": "Due to budget constraints, management decided to put the marketing campaign on hold.",
+    "example_vi": "Do giới hạn về ngân sách, ban quản lý quyết định tạm dừng chiến dịch marketing."
+  },
+  {
+    "id": "pm-10",
+    "term": "Bring to the table",
+    "ipa": "/brɪŋ tuː ðə ˈteɪ.bəl/",
+    "category": "management",
+    "definition": "Đóng góp giá trị, kỹ năng hoặc ý tưởng hữu ích",
+    "context": "Khen ngợi thế mạnh của đồng nghiệp hoặc định hình giá trị bản thân.",
+    "example_en": "She brings years of experience in cloud computing to the table.",
+    "example_vi": "Cô ấy đóng góp nhiều năm kinh nghiệm trong lĩnh vực điện toán đám mây cho dự án."
+  },
+  {
+    "id": "pm-11",
+    "term": "Take the initiative",
+    "ipa": "/teɪk ði ɪˈnɪʃ.ə.tɪv/",
+    "category": "management",
+    "definition": "Chủ động dẫn dắt, tiên phong thực hiện công việc",
+    "context": "Một đức tính cực kỳ được đánh giá cao ở môi trường B2 công sở.",
+    "example_en": "He took the initiative to refactor the legacy code without being asked.",
+    "example_vi": "Anh ấy đã chủ động tối ưu lại mã nguồn cũ mà không cần ai yêu cầu."
+  },
+  {
+    "id": "pm-12",
+    "term": "On the same page",
+    "ipa": "/ɒn ðə seɪm peɪdʒ/",
+    "category": "management",
+    "definition": "Đồng thuận, có cùng hiểu biết/thống nhất ý kiến",
+    "context": "Cụm từ cửa miệng trong các buổi họp để tránh hiểu lầm.",
+    "example_en": "Let's review the requirements once more to ensure we are all on the same page.",
+    "example_vi": "Hãy xem lại các yêu cầu một lần nữa để đảm bảo tất cả chúng ta đều thống nhất ý kiến."
+  },
+  {
+    "id": "pm-13",
+    "term": "Think outside the box",
+    "ipa": "/θɪŋk ˌaʊtˈsaɪd ðə bɒks/",
+    "category": "management",
+    "definition": "Tư duy sáng tạo, đột phá, vượt ngoài lối mòn",
+    "context": "Tìm giải pháp mới lạ khi các phương pháp cũ không hiệu quả.",
+    "example_en": "To solve this architectural issue, we need to think outside the box.",
+    "example_vi": "Để giải quyết vấn đề kiến trúc này, chúng ta cần tư duy vượt ngoài lối mòn."
+  },
+  {
+    "id": "pm-14",
+    "term": "Keep track of",
+    "ipa": "/kiːp træk ɒv/",
+    "category": "management",
+    "definition": "Theo dõi sát sao tiến độ hoặc sự thay đổi",
+    "context": "Dùng cho việc giám sát task, dữ liệu hoặc tiến độ dự án.",
+    "example_en": "Using Jira makes it much easier to keep track of tasks and milestones.",
+    "example_vi": "Sử dụng Jira giúp việc theo dõi sát sao các tác vụ và cột mốc dễ dàng hơn nhiều."
+  },
+  {
+    "id": "pm-15",
+    "term": "In the long run",
+    "ipa": "/ɪn ðə lɒŋ rʌn/",
+    "category": "management",
+    "definition": "Về lâu về dài, trong dài hạn",
+    "context": "Khi phân tích lợi ích lâu dài của một quyết định/giải pháp.",
+    "example_en": "Investing in automated tests will save us a lot of time in the long run.",
+    "example_vi": "Đầu tư vào kiểm thử tự động sẽ tiết kiệm cho chúng ta rất nhiều thời gian về lâu về dài."
+  },
+  {
+    "id": "pm-16",
+    "term": "Play a key role in",
+    "ipa": "/pleɪ eɪ kiː rəʊl ɪn/",
+    "category": "management",
+    "definition": "Đóng vai trò then chốt/chủ chốt trong",
+    "context": "Khẳng định sự đóng góp cực kỳ quan trọng của một cá nhân hay yếu tố.",
+    "example_en": "The DevOps team played a key role in stabilizing our deployment pipeline.",
+    "example_vi": "Nhóm DevOps đóng vai trò then chốt trong việc làm ổn định luồng triển khai của chúng ta."
+  },
+  {
+    "id": "pm-17",
+    "term": "Mitigate risks",
+    "ipa": "/ˈmɪt.ɪ.ɡeɪt rɪsks/",
+    "category": "management",
+    "definition": "Giảm thiểu rủi ro cho dự án hoặc hệ thống",
+    "context": "Khái niệm cực kỳ quan trọng trong quản lý chất lượng (Risk Management).",
+    "example_en": "We should run multiple test scenarios to mitigate risks before the major release.",
+    "example_vi": "Chúng ta nên chạy nhiều kịch bản kiểm thử để giảm thiểu rủi ro trước phiên bản phát hành lớn."
+  },
+  {
+    "id": "pm-18",
+    "term": "Reach a consensus",
+    "ipa": "/riːtʃ ə kənˈsen.səs/",
+    "category": "management",
+    "definition": "Đạt được sự đồng thuận/nhất trí chung cả đội",
+    "context": "Trang trọng hơn rất nhiều so với cụm từ 'agree with each other'.",
+    "example_en": "After arguing for two hours, the stakeholders finally reached a consensus.",
+    "example_vi": "Sau hai tiếng tranh luận, các bên liên quan cuối cùng đã đạt được sự đồng thuận chung."
+  },
+  {
+    "id": "pm-19",
+    "term": "Streamline a process",
+    "ipa": "/ˈstriːm.laɪn ə ˈprəʊ.ses/",
+    "category": "management",
+    "definition": "Tối giản hóa quy trình để tăng hiệu suất",
+    "context": "Loại bỏ những bước trung gian rườm rà không cần thiết.",
+    "example_en": "The company aims to streamline the onboarding process for new developers.",
+    "example_vi": "Công ty đặt mục tiêu tối giản hóa quy trình gia nhập của các lập trình viên mới."
+  },
+  {
+    "id": "pm-20",
+    "term": "Take ownership of",
+    "ipa": "/teɪk ˈəʊ.nə.ʃɪp ɒv/",
+    "category": "management",
+    "definition": "Chịu trách nhiệm hoàn toàn đối với công việc",
+    "context": "Tự giác làm chủ công việc từ đầu đến cuối mà không cần nhắc nhở.",
+    "example_en": "Every developer should take ownership of the code they write.",
+    "example_vi": "Mỗi lập trình viên nên chịu trách nhiệm hoàn toàn đối với đoạn mã nguồn họ viết."
+  },
+  {
+    "id": "pm-21",
+    "term": "Drive results",
+    "ipa": "/draɪv rɪˈzʌlts/",
+    "category": "management",
+    "definition": "Thúc đẩy tiến trình để đạt được kết quả cụ thể",
+    "context": "Cụm từ nhấn mạnh năng lực hành động hướng đến mục tiêu thực tế.",
+    "example_en": "We need a strong project manager who can organize the team and drive results.",
+    "example_vi": "Chúng ta cần một quản lý dự án giỏi, người có thể tổ chức nhóm và thúc đẩy đạt kết quả."
+  },
+  {
+    "id": "pm-22",
+    "term": "Leverage assets",
+    "ipa": "/ˈliː.vər.ɪdʒ ˈæs.ets/",
+    "category": "management",
+    "definition": "Tận dụng tối đa các tài nguyên, thế mạnh sẵn có",
+    "context": "Chiến thuật dùng nguồn lực cũ để tạo ra giá trị mới hiệu quả hơn.",
+    "example_en": "To stay competitive, we must leverage our existing internal API assets.",
+    "example_vi": "Để giữ vững tính cạnh tranh, chúng ta phải tận dụng tối đa các tài sản API nội bộ sẵn có."
+  },
+  {
+    "id": "pm-23",
+    "term": "Core competency",
+    "ipa": "/kɔː ˈkɒm.pɪ.tən.si/",
+    "category": "management",
+    "definition": "Năng lực cốt lõi (thế mạnh nổi trội nhất)",
+    "context": "Thường dùng để nói về ưu thế cạnh tranh của cá nhân hoặc công ty.",
+    "example_en": "Building highly scalable backend systems is our company's core competency.",
+    "example_vi": "Xây dựng các hệ thống backend có khả năng mở rộng cao là năng lực cốt lõi của công ty chúng tôi."
+  },
+  {
+    "id": "pm-24",
+    "term": "Best practice",
+    "ipa": "/best ˈpræk.tɪs/",
+    "category": "management",
+    "definition": "Phương pháp tối ưu nhất đã được kiểm chứng thành công",
+    "context": "Quy chuẩn chuẩn mực được giới chuyên môn khuyên dùng.",
+    "example_en": "Writing self-documenting code is a well-known best practice in software engineering.",
+    "example_vi": "Viết mã nguồn tự giải thích là một phương pháp tối ưu đã được kiểm chứng nổi tiếng trong công nghệ phần mềm."
+  },
+  {
+    "id": "pm-25",
+    "term": "Pain point",
+    "ipa": "/peɪn pɔɪnt/",
+    "category": "management",
+    "definition": "Điểm đau (khó khăn, bất tiện lớn nhất của khách hàng)",
+    "context": "Khái niệm cực kỳ quan trọng khi nghiên cứu sản phẩm & tìm giải pháp bán hàng.",
+    "example_en": "The slow checkout process is the primary pain point for users of this e-commerce app.",
+    "example_vi": "Quá trình thanh toán chậm chạp là điểm đau lớn nhất đối với người dùng ứng dụng thương mại điện tử này."
+  },
+  {
+    "id": "tech-1",
+    "term": "Gather requirements",
+    "ipa": "/ˈɡæð.ər rɪˈkwaɪə.mənts/",
+    "category": "tech",
+    "definition": "Thu thập các yêu cầu nghiệp vụ hệ thống",
+    "context": "Quy trình thiết yếu của Business Analyst (BA) hoặc Product Owner.",
+    "example_en": "Our Product Manager is gathering system requirements for the payment integration.",
+    "example_vi": "Quản lý sản phẩm của chúng tôi đang thu thập các yêu cầu hệ thống cho việc tích hợp thanh toán."
+  },
+  {
+    "id": "tech-2",
+    "term": "Optimize performance",
+    "ipa": "/ˈɒp.tɪ.maɪz pəˈfɔː.məns/",
+    "category": "tech",
+    "definition": "Tối ưu hóa hiệu năng phần mềm/ứng dụng",
+    "context": "Dùng khi cải thiện tốc độ tải hoặc độ ổn định của hệ thống.",
+    "example_en": "We should refactor this database query to optimize application's performance.",
+    "example_vi": "Chúng ta nên cấu trúc lại câu truy vấn cơ sở dữ liệu này để tối ưu hóa hiệu năng ứng dụng."
+  },
+  {
+    "id": "tech-3",
+    "term": "Seamless integration",
+    "ipa": "/ˈsiːm.ləs ˌɪn.tɪˈɡreɪ.ʃən/",
+    "category": "tech",
+    "definition": "Sự tích hợp mượt mà, không gặp chướng ngại",
+    "context": "Bao gồm mượt mà ở giao diện người dùng và hoạt động trơn tru ở backend.",
+    "example_en": "The ultimate goal is to ensure a seamless integration between our platform and the CRM.",
+    "example_vi": "Mục tiêu tối thượng là đảm bảo sự tích hợp mượt mà giữa nền tảng của chúng ta và hệ thống CRM."
+  },
+  {
+    "id": "tech-4",
+    "term": "Deploy to production",
+    "ipa": "/dɪˈplɔɪ tuː prəˈdʌk.ʃən/",
+    "category": "tech",
+    "definition": "Đưa mã nguồn/tính năng lên môi trường thực tế",
+    "context": "Môi trường 'Production' là nơi người dùng thật trải nghiệm sản phẩm.",
+    "example_en": "The critical hotfix has been verified and is ready to deploy to production.",
+    "example_vi": "Bản sửa lỗi khẩn cấp quan trọng đã được xác minh và sẵn sàng đưa lên môi trường thực tế."
+  },
+  {
+    "id": "tech-5",
+    "term": "Technical debt",
+    "ipa": "/ˈtek.nɪ.kəl det/",
+    "category": "tech",
+    "definition": "Nợ kỹ thuật (Code ẩu để kịp tiến độ, gây gánh nặng sau này)",
+    "context": "Một khái niệm cực hay để giải thích với quản lý lý do cần cấu trúc lại code.",
+    "example_en": "Ignoring code quality now will accumulate technical debt that we will pay for later.",
+    "example_vi": "Bỏ qua chất lượng mã nguồn lúc này sẽ tích tụ nợ kỹ thuật mà chúng ta phải trả giá về sau."
+  },
+  {
+    "id": "tech-6",
+    "term": "Scalable architecture",
+    "ipa": "/ˈskeɪ.lə.bəl ˈɑː.kɪ.tek.tʃər/",
+    "category": "tech",
+    "definition": "Kiến trúc hệ thống có khả năng mở rộng tốt",
+    "context": "Để hệ thống gánh được lượng truy cập cực khủng mà không đổ vỡ.",
+    "example_en": "We need a highly scalable architecture to support millions of concurrent active users.",
+    "example_vi": "Chúng ta cần một kiến trúc có khả năng mở rộng cao để hỗ trợ hàng triệu người dùng hoạt động đồng thời."
+  },
+  {
+    "id": "tech-7",
+    "term": "Data synchronization",
+    "ipa": "/ˈdeɪ.tə ˌsɪŋ.krə.naɪˈzeɪ.ʃən/",
+    "category": "tech",
+    "definition": "Quy trình đồng bộ hóa dữ liệu",
+    "context": "Thường dùng khi thảo luận về các hệ thống cloud, offline sync hoặc đa máy chủ.",
+    "example_en": "The developers fixed the bug causing latency during data synchronization.",
+    "example_vi": "Các lập trình viên đã sửa lỗi gây ra sự chậm trễ trong quá trình đồng bộ hóa dữ liệu."
+  },
+  {
+    "id": "tech-8",
+    "term": "User-friendly interface",
+    "ipa": "/ˈjuː.zər ˈfrend.li ˈɪn.tə.feɪs/",
+    "category": "tech",
+    "definition": "Giao diện thân thiện, dễ sử dụng cho người dùng",
+    "context": "Khi thảo luận về UX/UI của sản phẩm.",
+    "example_en": "Our primary design objective is to build a modern and user-friendly interface.",
+    "example_vi": "Mục tiêu thiết kế hàng đầu của chúng tôi là xây dựng một giao diện hiện đại và thân thiện với người dùng."
+  },
+  {
+    "id": "tech-9",
+    "term": "Backward compatibility",
+    "ipa": "/ˈbæk.wəd kəmˌpæt.əˈbɪl.ə.ti/",
+    "category": "tech",
+    "definition": "Khả năng tương thích ngược với phiên bản cũ",
+    "context": "Giúp phần mềm mới vẫn chạy tốt các tệp tin hoặc thư viện của bản cũ.",
+    "example_en": "We must ensure backward compatibility so older clients don't experience crashes.",
+    "example_vi": "Chúng ta phải đảm bảo khả năng tương thích ngược để các ứng dụng khách cũ hơn không gặp lỗi sập hệ thống."
+  },
+  {
+    "id": "tech-10",
+    "term": "Cross-functional team",
+    "ipa": "/krɒs ˈfʌŋk.ʃən.əl tiːm/",
+    "category": "tech",
+    "definition": "Đội ngũ liên chức năng (Nhiều chuyên môn phối hợp)",
+    "context": "Bao gồm Dev, QA, Design, BA cùng làm việc chung trong 1 team dự án.",
+    "example_en": "Working in a cross-functional team helps bridge the gap between design and development.",
+    "example_vi": "Làm việc trong một đội ngũ liên chức năng giúp thu hẹp khoảng cách giữa thiết kế và phát triển."
+  },
+  {
+    "id": "tech-11",
+    "term": "Refactor code",
+    "ipa": "/ˌriːˈfæk.tər kəʊd/",
+    "category": "tech",
+    "definition": "Tối ưu, cấu trúc lại mã nguồn mà không đổi tính năng ngoại vi",
+    "context": "Giúp code sạch hơn, dễ bảo trì hơn và giảm nợ kỹ thuật.",
+    "example_en": "Before writing new features, we should refactor code in the auth controller.",
+    "example_vi": "Trước khi viết tính năng mới, chúng ta nên tối ưu lại mã nguồn trong phần điều khiển xác thực."
+  },
+  {
+    "id": "tech-12",
+    "term": "High availability",
+    "ipa": "/haɪ əˌveɪ.ləˈbɪl.ə.ti/",
+    "category": "tech",
+    "definition": "Tính sẵn sàng cao của hệ thống (Rất ít khi bị sập/chết máy)",
+    "context": "Được thiết kế dự phòng để ứng dụng trực tuyến gần như 100% thời gian.",
+    "example_en": "Using load balancers is key to achieving high availability for the cloud app.",
+    "example_vi": "Sử dụng bộ cân bằng tải là chìa khóa để đạt được tính sẵn sàng cao cho ứng dụng đám mây."
+  },
+  {
+    "id": "tech-13",
+    "term": "Proof of concept (POC)",
+    "ipa": "/pruːf ɒv ˈkɒn.sept/",
+    "category": "tech",
+    "definition": "Bản thử nghiệm chứng minh ý tưởng khả thi",
+    "context": "Bản demo thô để xác minh giải pháp kỹ thuật có hoạt động thực tế hay không.",
+    "example_en": "We need a quick proof of concept before investing three months in this tool.",
+    "example_vi": "Chúng ta cần một bản thử nghiệm tính khả thi nhanh trước khi đầu tư ba tháng vào công cụ này."
+  },
+  {
+    "id": "tech-14",
+    "term": "Technical specification",
+    "ipa": "/ˈtek.nɪ.kəl ˌspes.ɪ.fɪˈkeɪ.ʃən/",
+    "category": "tech",
+    "definition": "Tài liệu đặc tả kỹ thuật chi tiết",
+    "context": "Tài liệu chỉ dẫn cho lập trình viên về kiến trúc, API và cấu trúc dữ liệu.",
+    "example_en": "Please read the technical specification carefully before designing the database.",
+    "example_vi": "Vui lòng đọc kỹ tài liệu đặc tả kỹ thuật trước khi thiết kế cơ sở dữ liệu."
+  },
+  {
+    "id": "tech-15",
+    "term": "Roll back",
+    "ipa": "/rəʊl bæk/",
+    "category": "tech",
+    "definition": "Khôi phục lại phiên bản/trạng thái ổn định trước đó",
+    "context": "Dùng khi phiên bản mới phát hành gặp sự cố khẩn cấp trên Production.",
+    "example_en": "Because the update broke the login system, we had to roll back to version 2.1.",
+    "example_vi": "Vì bản cập nhật làm hỏng hệ thống đăng nhập, chúng tôi đã phải khôi phục lại phiên bản 2.1."
+  },
+  {
+    "id": "tech-16",
+    "term": "Out of the box",
+    "ipa": "/aʊt ɒv ðə bɒks/",
+    "category": "tech",
+    "definition": "Có sẵn dùng được ngay, không cần cấu hình phức tạp",
+    "context": "Một công cụ hoặc thư viện đã tích hợp đầy đủ mọi thứ cần thiết từ đầu.",
+    "example_en": "This framework provides user authentication out of the box.",
+    "example_vi": "Khung phát triển này cung cấp tính năng xác thực người dùng có sẵn dùng được ngay."
+  },
+  {
+    "id": "tech-17",
+    "term": "Bottleneck analysis",
+    "ipa": "/ˈbɒt.əl.nek əˈnæl.ə.sɪs/",
+    "category": "tech",
+    "definition": "Phân tích điểm nghẽn hệ thống phần mềm",
+    "context": "Hành động điều tra nguyên nhân làm chậm luồng xử lý dữ liệu.",
+    "example_en": "We ran a bottleneck analysis and discovered that database read speed was the problem.",
+    "example_vi": "Chúng tôi đã chạy phân tích điểm nghẽn và phát hiện ra tốc độ đọc cơ sở dữ liệu chính là vấn đề."
+  },
+  {
+    "id": "tech-18",
+    "term": "Deprecate a feature",
+    "ipa": "/ˈdep.rə.keɪt eɪ ˈfiː.tʃər/",
+    "category": "tech",
+    "definition": "Ngừng hỗ trợ hoặc chuẩn bị loại bỏ một tính năng",
+    "context": "Khuyên người dùng đổi sang phương thức mới vì bản cũ sắp bị khai tử.",
+    "example_en": "We plan to deprecate this legacy API endpoint in the next release.",
+    "example_vi": "Chúng tôi lên kế hoạch ngừng hỗ trợ cổng API cũ này trong đợt phát hành tới."
+  },
+  {
+    "id": "tech-19",
+    "term": "User acceptance testing (UAT)",
+    "ipa": "/ˈjuː.zər əkˈsep.təns ˈtest.ɪŋ/",
+    "category": "tech",
+    "definition": "Kiểm thử chấp nhận người dùng cuối",
+    "context": "Bước kiểm thử cuối cùng do khách hàng thực hiện trước khi bàn giao dự án.",
+    "example_en": "The system is currently in UAT, and we expect final approval by Friday.",
+    "example_vi": "Hệ thống hiện đang trong giai đoạn kiểm thử chấp nhận (UAT), và chúng tôi kỳ vọng duyệt cuối cùng trước thứ Sáu."
+  },
+  {
+    "id": "tech-20",
+    "term": "Continuous integration (CI)",
+    "ipa": "/kənˈtɪn.ju.əs ˌɪn.tɪˈɡreɪ.ʃən/",
+    "category": "tech",
+    "definition": "Quy trình tích hợp mã nguồn tự động, liên tục",
+    "context": "Tự động build và test mỗi khi lập trình viên đẩy code mới lên.",
+    "example_en": "Setting up continuous integration helped us detect bugs much earlier.",
+    "example_vi": "Thiết lập quy trình tích hợp liên tục đã giúp chúng tôi phát hiện lỗi sớm hơn nhiều."
+  },
+  {
+    "id": "tech-21",
+    "term": "Feature parity",
+    "ipa": "/ˈfiː.tʃər ˈpær.ə.ti/",
+    "category": "tech",
+    "definition": "Sự tương đương về tính năng giữa các phiên bản/nền tảng",
+    "context": "Ví dụ app trên iOS và Android phải có tính năng hoàn toàn giống nhau.",
+    "example_en": "We are striving to achieve feature parity between our web and mobile apps.",
+    "example_vi": "Chúng tôi đang nỗ lực để đạt được sự tương đương về tính năng giữa ứng dụng web và di động."
+  },
+  {
+    "id": "tech-22",
+    "term": "Workaround",
+    "ipa": "/ˈwɜːk.ə.raʊnd/",
+    "category": "tech",
+    "definition": "Giải pháp tạm thời để vượt qua lỗi trước khi có bản vá chính thức",
+    "context": "Biện pháp đi đường vòng để giữ hệ thống chạy ổn định ngắn hạn.",
+    "example_en": "While the team is working on a permanent fix, here is a temporary workaround.",
+    "example_vi": "Trong khi cả đội đang tìm cách sửa lỗi triệt để, đây là giải pháp tạm thời đi đường vòng."
+  },
+  {
+    "id": "tech-23",
+    "term": "Go-to-market strategy",
+    "ipa": "/ɡəʊ tuː ˈmɑː.kɪt ˈstræt.ə.dʒi/",
+    "category": "tech",
+    "definition": "Chiến lược tiếp cận thị trường của sản phẩm",
+    "context": "Kế hoạch chi tiết giới thiệu sản phẩm công nghệ mới tới khách hàng.",
+    "example_en": "Our go-to-market strategy focuses heavily on target ads and tech influencers.",
+    "example_vi": "Chiến lược tiếp cận thị trường của chúng tôi tập trung mạnh vào quảng cáo mục tiêu và người có sức ảnh hưởng công nghệ."
+  },
+  {
+    "id": "tech-24",
+    "term": "Agile methodology",
+    "ipa": "/ˈædʒ.aɪl ˌmeθ.əˈdɒl.ə.dʒi/",
+    "category": "tech",
+    "definition": "Phương pháp phát triển phần mềm linh hoạt",
+    "context": "Chia nhỏ dự án thành nhiều phần và cải tiến liên tục dựa trên feedback.",
+    "example_en": "Adopting Agile methodology has greatly improved our team's communication and speed.",
+    "example_vi": "Áp dụng phương pháp Agile đã cải thiện đáng kể giao tiếp và tốc độ của đội ngũ chúng tôi."
+  },
+  {
+    "id": "tech-25",
+    "term": "Troubleshoot a bug",
+    "ipa": "/ˈtrʌb.əl.ʃuːt eɪ bʌɡ/",
+    "category": "tech",
+    "definition": "Tìm hiểu nguyên nhân sâu xa và khắc phục sự cố lỗi phần mềm",
+    "context": "Bao gồm việc phân tích log, tái hiện lỗi và đưa ra hướng xử lý.",
+    "example_en": "The senior developer helped me troubleshoot a critical bug in the authentication logic.",
+    "example_vi": "Lập trình viên cấp cao đã giúp tôi khắc phục sự cố lỗi nghiêm trọng trong logic xác thực."
+  },
+  {
+    "id": "greet-1",
+    "term": "Pleasure to make your acquaintance",
+    "ipa": "/ˈpleʒ.ər tuː meɪk jɔːr əˈkweɪn.təns/",
+    "category": "greeting",
+    "definition": "Rất hân hạnh được làm quen với anh/chị",
+    "context": "Văn phong cực kỳ lịch sự và trang trọng khi gặp đối tác hoặc khách hàng lớn lần đầu tiên.",
+    "example_en": "It is a absolute pleasure to make your acquaintance, Mr. Davis.",
+    "example_vi": "Rất hân hạnh được làm quen với ông, ông Davis."
+  },
+  {
+    "id": "greet-2",
+    "term": "How have you been keeping?",
+    "ipa": "/haʊ hæv juː biːn ˈkiː.pɪŋ/",
+    "category": "greeting",
+    "definition": "Dạo này anh/chị vẫn khỏe chứ?",
+    "context": "Cách hỏi thăm sức khỏe chuyên nghiệp và thân mật dành cho đồng nghiệp hoặc đối tác đã quen biết.",
+    "example_en": "How have you been keeping since the last project launch?",
+    "example_vi": "Dạo này anh vẫn khỏe chứ, kể từ đợt ra mắt dự án trước?"
+  },
+  {
+    "id": "greet-3",
+    "term": "I've been looking forward to meeting you",
+    "ipa": "/aɪv biːn ˈlʊk.ɪŋ ˈfɔː.wəd tuː ˈmiː.tɪŋ juː/",
+    "category": "greeting",
+    "definition": "Tôi đã rất mong đợi được gặp anh/chị",
+    "context": "Tạo ấn tượng tích cực và nhiệt tình ngay khi mới gặp mặt.",
+    "example_en": "I've been looking forward to meeting you in person after all our emails.",
+    "example_vi": "Tôi đã rất mong đợi được gặp trực tiếp anh sau tất cả các email trao đổi giữa chúng ta."
+  },
+  {
+    "id": "greet-4",
+    "term": "On behalf of [Company], welcome",
+    "ipa": "/ɒn bɪˈhɑːf ɒv ... ˈwel.kəm/",
+    "category": "greeting",
+    "definition": "Thay mặt công ty, xin chào đón anh/chị",
+    "context": "Lời chào đón trang trọng khi tiếp đón khách hoặc nhân viên mới đến văn phòng.",
+    "example_en": "On behalf of TechCorp, welcome to our new research facility.",
+    "example_vi": "Thay mặt cho TechCorp, chào đón anh đến với cơ sở nghiên cứu mới của chúng tôi."
+  },
+  {
+    "id": "greet-5",
+    "term": "Great to finally connect in person",
+    "ipa": "/ɡreɪt tuː ˈfaɪ.nəl.i kəˈnekt ɪn ˈpɜː.sən/",
+    "category": "greeting",
+    "definition": "Rất vui vì cuối cùng đã được gặp trực tiếp ngoài đời",
+    "context": "Dùng khi lần đầu gặp mặt một đối tác mà trước đó chỉ liên hệ online.",
+    "example_en": "We've sent so many emails, it's great to finally connect in person.",
+    "example_vi": "Chúng ta đã gửi rất nhiều email, thật tuyệt vời khi cuối cùng cũng được gặp trực tiếp ngoài đời."
+  },
+  {
+    "id": "greet-6",
+    "term": "How is everything on your end?",
+    "ipa": "/haʊ ɪz ˈev.ri.θɪŋ ɒn jɔːr end/",
+    "category": "greeting",
+    "definition": "Mọi việc ở phía bên anh/chị như thế nào rồi?",
+    "context": "Câu hỏi xã giao và cập nhật tiến độ công việc một cách tự nhiên.",
+    "example_en": "Hi Susan, how is everything on your end with the new design template?",
+    "example_vi": "Chào Susan, mọi việc bên phía bạn với bản thiết kế mẫu mới thế nào rồi?"
+  },
+  {
+    "id": "greet-7",
+    "term": "Please accept my warm welcome",
+    "ipa": "/pliːz əkˈsept maɪ wɔːm ˈwel.kəm/",
+    "category": "greeting",
+    "definition": "Xin vui lòng nhận lời chào đón nồng nhiệt từ tôi",
+    "context": "Dùng trong bài phát biểu hoặc email chào đón trang trọng.",
+    "example_en": "Please accept my warm welcome to the annual leadership summit.",
+    "example_vi": "Xin vui lòng nhận lời chào đón nồng nhiệt từ tôi đến hội nghị thượng đỉnh lãnh đạo thường niên."
+  },
+  {
+    "id": "greet-8",
+    "term": "It's an absolute privilege to meet you",
+    "ipa": "/ɪts ən ˈæb.sə.luːt ˈprɪv.əl.ɪdʒ tuː meɪt juː/",
+    "category": "greeting",
+    "definition": "Được gặp anh/chị quả là một đặc ân lớn lao",
+    "context": "Bày tỏ sự tôn trọng cao độ khi gặp những nhân vật cấp cao hoặc có tầm ảnh hưởng lớn.",
+    "example_en": "It's an absolute privilege to meet you, Professor Hawking.",
+    "example_vi": "Được gặp ông quả là một đặc ân lớn lao, Giáo sư Hawking."
+  },
+  {
+    "id": "greet-9",
+    "term": "I've heard a great deal about you",
+    "ipa": "/aɪv hɜːd ə ɡreɪt diːl əˈbaʊt juː/",
+    "category": "greeting",
+    "definition": "Tôi đã được nghe rất nhiều điều tốt đẹp về anh/chị",
+    "context": "Cách chào xã giao lịch sự khi gặp người nổi tiếng hoặc đồng nghiệp xuất sắc.",
+    "example_en": "Hello Mark, I've heard a great deal about your success in the European market.",
+    "example_vi": "Chào Mark, tôi đã được nghe rất nhiều điều về thành công của bạn ở thị trường châu Âu."
+  },
+  {
+    "id": "greet-10",
+    "term": "Allow me to introduce myself",
+    "ipa": "/əˈlaʊ miː tuː ˌɪn.trəˈdjuːs maɪˈself/",
+    "category": "greeting",
+    "definition": "Cho phép tôi được tự giới thiệu về bản thân",
+    "context": "Mở đầu màn tự giới thiệu lịch sự tại các sự kiện giao lưu, hội thảo.",
+    "example_en": "Allow me to introduce myself, I am the lead software architect for this project.",
+    "example_vi": "Cho phép tôi tự giới thiệu, tôi là kiến trúc sư phần mềm dẫn dắt dự án này."
+  },
+  {
+    "id": "greet-11",
+    "term": "It is an honor to have you here",
+    "ipa": "/ɪt ɪz ən ˈɒn.ər tuː hæv juː hɪər/",
+    "category": "greeting",
+    "definition": "Thật vinh hạnh khi được đón tiếp anh/chị ở đây",
+    "context": "Lời chào của chủ nhà dành cho khách quý khi họ ghé thăm văn phòng hoặc sự kiện.",
+    "example_en": "It is an honor to have you here at our headquarters, Dr. Smith.",
+    "example_vi": "Thật vinh hạnh khi được đón tiếp ông ở đây tại trụ sở chính của chúng tôi, Tiến sĩ Smith."
+  },
+  {
+    "id": "greet-12",
+    "term": "How are things progressing on your side?",
+    "ipa": "/haʊ ɑːr θɪŋz prəˈɡres.ɪŋ ɒn jɔːr saɪd/",
+    "category": "greeting",
+    "definition": "Mọi thứ bên phía bạn đang tiến triển thế nào?",
+    "context": "Dùng khi bắt đầu cuộc gọi hoặc cuộc họp để cập nhật nhanh tiến độ.",
+    "example_en": "Hi team, how are things progressing on your side with the beta test?",
+    "example_vi": "Chào cả đội, mọi thứ bên phía các bạn với đợt kiểm thử thử nghiệm đang tiến triển thế nào?"
+  },
+  {
+    "id": "greet-13",
+    "term": "Thank you for taking the time to meet",
+    "ipa": "/θæŋk juː fɔːr ˈteɪ.kɪŋ ðə taɪm tuː miːt/",
+    "category": "greeting",
+    "definition": "Cảm ơn vì đã dành thời gian gặp gỡ",
+    "context": "Bày tỏ lòng biết ơn sự bận rộn của đối phương khi bắt đầu buổi gặp mặt.",
+    "example_en": "Thank you for taking the time to meet with us on such short notice.",
+    "example_vi": "Cảm ơn anh vì đã dành thời gian gặp gỡ chúng tôi trong một thông báo gấp như vậy."
+  },
+  {
+    "id": "greet-14",
+    "term": "It's wonderful to see you again",
+    "ipa": "/ɪts ˈwʌn.də.fəl tuː siː juː əˈɡen/",
+    "category": "greeting",
+    "definition": "Rất vui được gặp lại anh/chị",
+    "context": "Chào hỏi khi gặp lại một người quen cũ, khách hàng cũ trong môi trường công sở.",
+    "example_en": "It's wonderful to see you again after the conferences last year.",
+    "example_vi": "Rất vui được gặp lại anh sau các buổi hội nghị vào năm ngoái."
+  },
+  {
+    "id": "greet-15",
+    "term": "How has your week been shaping up?",
+    "ipa": "/haʊ hæz jɔːr wiːk biːn ˈʃeɪ.pɪŋ ʌp/",
+    "category": "greeting",
+    "definition": "Tuần làm việc của anh/chị diễn ra thế nào rồi?",
+    "context": "Câu hỏi xã giao tinh tế vào giữa hoặc cuối tuần làm việc.",
+    "example_en": "How has your week been shaping up, John? Busy as usual?",
+    "example_vi": "Tuần làm việc của bạn thế nào rồi, John? Vẫn bận rộn như thường lệ chứ?"
+  },
+  {
+    "id": "greet-16",
+    "term": "I trust you had a pleasant journey here",
+    "ipa": "/aɪ trʌst juː hæd ə ˈplez.ənt ˈdʒɜː.ni hɪər/",
+    "category": "greeting",
+    "definition": "Tôi tin là anh/chị đã có một chuyến đi thuận lợi đến đây",
+    "context": "Hỏi thăm lịch sự khi đón khách phương xa đến thăm văn phòng của mình.",
+    "example_en": "Welcome to Tokyo. I trust you had a pleasant journey here.",
+    "example_vi": "Chào mừng đến Tokyo. Tôi tin là anh đã có một chuyến đi thuận lợi đến đây."
+  },
+  {
+    "id": "greet-17",
+    "term": "It's great to have you on board",
+    "ipa": "/ɪts ɡreɪt tuː hæv juː ɒn bɔːd/",
+    "category": "greeting",
+    "definition": "Rất vui mừng khi có bạn gia nhập đội ngũ chúng tôi",
+    "context": "Lời chào nồng nhiệt dành cho nhân viên mới vào ngày đầu tiên đi làm.",
+    "example_en": "Congratulations on the new role, it's great to have you on board.",
+    "example_vi": "Chúc mừng bạn nhận vai trò mới, rất vui mừng khi có bạn gia nhập đội ngũ của chúng tôi."
+  },
+  {
+    "id": "greet-18",
+    "term": "How are you settling into your new role?",
+    "ipa": "/haʊ ɑːr juː ˈset.lɪŋ ˈɪn.tuː jɔːr njuː rəʊl/",
+    "category": "greeting",
+    "definition": "Bạn hòa nhập với vai trò mới thế nào rồi?",
+    "context": "Hỏi thăm sự thích nghi của một nhân viên mới sau vài ngày/tuần đầu làm việc.",
+    "example_en": "Hi Sarah, how are you settling into your new role as product manager?",
+    "example_vi": "Chào Sarah, bạn hòa nhập với vai trò mới quản lý sản phẩm thế nào rồi?"
+  },
+  {
+    "id": "greet-19",
+    "term": "It is a pleasure collaborating with you",
+    "ipa": "/ɪt ɪz ə ˈpleʒ.ər kəˈlæb.ə.reɪ.tɪŋ wɪð juː/",
+    "category": "greeting",
+    "definition": "Thật là một niềm vui khi được hợp tác với anh/chị",
+    "context": "Lời chào xã giao lịch sự khi bắt đầu hoặc trong quá trình chạy dự án chung.",
+    "example_en": "It is a pleasure collaborating with you on this cloud migration program.",
+    "example_vi": "Thật là một niềm vui khi được hợp tác với anh trong chương trình di chuyển đám mây này."
+  },
+  {
+    "id": "greet-20",
+    "term": "I'd like to introduce my colleague",
+    "ipa": "/aɪd laɪk tuː ˌɪn.trəˈdjuːs maɪ ˈkɒl.iːɡ/",
+    "category": "greeting",
+    "definition": "Tôi muốn giới thiệu đồng nghiệp của tôi",
+    "context": "Cách giới thiệu người cùng nhóm lịch sự trong cuộc họp.",
+    "example_en": "First, I'd like to introduce my colleague, David, who is our QA lead.",
+    "example_vi": "Đầu tiên, tôi muốn giới thiệu đồng nghiệp của tôi, David, trưởng nhóm QA của chúng tôi."
+  },
+  {
+    "id": "greet-21",
+    "term": "Thank you for hosting us today",
+    "ipa": "/θæŋk juː fɔːr ˈhəʊ.stɪŋ ʌs təˈdeɪ/",
+    "category": "greeting",
+    "definition": "Cảm ơn vì đã tiếp đón chúng tôi hôm nay",
+    "context": "Lời cảm ơn lịch thiệp khi đến thăm văn phòng của một công ty khác.",
+    "example_en": "Your office is beautiful. Thank you for hosting us today.",
+    "example_vi": "Văn phòng của bạn thật đẹp. Cảm ơn bạn vì đã tiếp đón chúng tôi hôm nay."
+  },
+  {
+    "id": "greet-22",
+    "term": "I'm delighted to be working with you",
+    "ipa": "/aɪm dɪˈlaɪ.tɪd tuː biː ˈwɜː.kɪŋ wɪð juː/",
+    "category": "greeting",
+    "definition": "Tôi rất vui mừng được làm việc cùng anh/chị",
+    "context": "Bày tỏ sự hào hứng tích cực khi bắt đầu một sự hợp tác mới.",
+    "example_en": "I'm delighted to be working with you on solving this supply chain problem.",
+    "example_vi": "Tôi rất vui mừng được làm việc cùng anh để giải quyết vấn đề chuỗi cung ứng này."
+  },
+  {
+    "id": "greet-23",
+    "term": "How was your weekend?",
+    "ipa": "/haʊ wɒz jɔːr ˌwiːkˈend/",
+    "category": "greeting",
+    "definition": "Cuối tuần của anh/chị thế nào?",
+    "context": "Câu hỏi xã giao kinh điển vào thứ Hai đầu tuần với đồng nghiệp.",
+    "example_en": "Morning Tom, how was your weekend? Did you do anything fun?",
+    "example_vi": "Chào buổi sáng Tom, cuối tuần của cậu thế nào? Có đi đâu chơi vui không?"
+  },
+  {
+    "id": "greet-24",
+    "term": "It's good to touch base again",
+    "ipa": "/ɪts ɡʊd tuː tʌtʃ beɪs əˈɡen/",
+    "category": "greeting",
+    "definition": "Rất vui được kết nối lại và trao đổi tình hình",
+    "context": "Chào khi gặp hoặc liên lạc lại với đối tác sau một thời gian im hơi lặng tiếng.",
+    "example_en": "Hi Helen, it's good to touch base again. We have a lot of updates.",
+    "example_vi": "Chào Helen, rất vui được kết nối lại. Chúng tôi có rất nhiều cập nhật mới."
+  },
+  {
+    "id": "greet-25",
+    "term": "Hope you're having a productive week",
+    "ipa": "/həʊp jɔːr ˈhæv.ɪŋ ə prəˈdʌk.tɪv wiːk/",
+    "category": "greeting",
+    "definition": "Hy vọng bạn đang có một tuần làm việc năng suất",
+    "context": "Lời chào lịch sự thường viết ở đầu email công việc xã giao.",
+    "example_en": "Hope you're having a productive week. I'm reaching out about the agreement.",
+    "example_vi": "Hy vọng bạn đang có một tuần làm việc hiệu quả. Tôi liên hệ về bản thỏa thuận."
+  },
+  {
+    "id": "greet-26",
+    "term": "I'm glad we could finally arrange this",
+    "ipa": "/aɪm ɡlæd wiː kʊd ˈfaɪ.nəl.i əˈreɪndʒ ðɪs/",
+    "category": "greeting",
+    "definition": "Tôi rất vui vì cuối cùng chúng ta đã sắp xếp được buổi này",
+    "context": "Sử dụng khi bắt đầu cuộc họp khó lên lịch hoặc đã bị hoãn nhiều lần.",
+    "example_en": "With all the busy calendars, I'm glad we could finally arrange this sync.",
+    "example_vi": "Với lịch trình bận rộn của cả hai bên, tôi rất vui vì cuối cùng đã sắp xếp được buổi đồng bộ này."
+  },
+  {
+    "id": "greet-27",
+    "term": "Welcome to our headquarters",
+    "ipa": "/ˈwel.kəm tuː ˈaʊ.ər ˈhedˌkwɔː.təz/",
+    "category": "greeting",
+    "definition": "Chào mừng đến với trụ sở chính của chúng tôi",
+    "context": "Lời tiếp đón thân thiện khi khách hàng hoặc đại tác đến thăm trụ sở công ty.",
+    "example_en": "Welcome to our headquarters. Let me show you around the office.",
+    "example_vi": "Chào mừng đến với trụ sở chính của chúng tôi. Để tôi dẫn anh đi tham quan văn phòng."
+  },
+  {
+    "id": "greet-28",
+    "term": "I've been looking forward to this discussion",
+    "ipa": "/aɪv biːn ˈlʊk.ɪŋ ˈfɔː.wəd tuː ðɪs dɪˈskʌʃ.ən/",
+    "category": "greeting",
+    "definition": "Tôi rất mong đợi buổi thảo luận ngày hôm nay",
+    "context": "Đặt bầu không khí cởi mở và sẵn sàng chia sẻ khi bắt đầu bàn bạc.",
+    "example_en": "We have critical decisions to make. I've been looking forward to this discussion.",
+    "example_vi": "Chúng ta có những quyết định quan trọng cần đưa ra. Tôi rất mong đợi buổi thảo luận hôm nay."
+  },
+  {
+    "id": "greet-29",
+    "term": "It's fantastic to have your expertise",
+    "ipa": "/ɪts fænˈtæs.tɪk tuː hæv jɔːr ˌek.spɜːˈtiːz/",
+    "category": "greeting",
+    "definition": "Thật tuyệt vời khi nhận được sự cố vấn chuyên môn của anh/chị",
+    "context": "Lời chào đón tôn vinh kinh nghiệm chuyên sâu của một đối tác khi họ tham gia đội ngũ.",
+    "example_en": "Welcome to the team! It's fantastic to have your expertise in cybersecurity.",
+    "example_vi": "Chào mừng đến với nhóm! Thật tuyệt vời khi có sự cố vấn chuyên sâu của anh về bảo mật mạng."
+  },
+  {
+    "id": "greet-30",
+    "term": "How's the weather treating you?",
+    "ipa": "/haʊz ðə ˈweð.ər ˈtriː.tɪŋ juː/",
+    "category": "greeting",
+    "definition": "Thời tiết bên đó đối xử với bạn thế nào?",
+    "context": "Câu hỏi tán gẫu (small talk) kinh điển khi bắt đầu cuộc gọi video từ xa giữa các quốc gia.",
+    "example_en": "How's the weather treating you in London? Still raining?",
+    "example_vi": "Thời tiết ở London thế nào rồi? Vẫn đang mưa à?"
+  },
+  {
+    "id": "greet-31",
+    "term": "Allow me to extend a warm welcome",
+    "ipa": "/əˈlaʊ miː tuː ɪkˈstend ə wɔːm ˈwel.kəm/",
+    "category": "greeting",
+    "definition": "Cho phép tôi được gửi lời chào mừng nồng nhiệt nhất",
+    "context": "Lời chào đón trang trọng mở màn cuộc họp cổ đông hay hội thảo khách hàng.",
+    "example_en": "Allow me to extend a warm welcome to all our business partners attending today.",
+    "example_vi": "Cho phép tôi được gửi lời chào mừng nồng nhiệt nhất đến tất cả các đối tác tham dự hôm nay."
+  },
+  {
+    "id": "greet-32",
+    "term": "Privilege to work alongside you",
+    "ipa": "/ˈprɪv.əl.ɪdʒ tuː wɜːk əˈlɒŋ.saɪd juː/",
+    "category": "greeting",
+    "definition": "Vinh hạnh khi được làm việc sát cánh cùng anh/chị",
+    "context": "Bày tỏ lòng tôn kính và hợp tác lâu dài với người có năng lực xuất sắc.",
+    "example_en": "It's been a privilege to work alongside you on this global marketing push.",
+    "example_vi": "Thật là một vinh hạnh lớn khi được làm việc sát cánh cùng anh trong chiến dịch tiếp thị toàn cầu này."
+  },
+  {
+    "id": "greet-33",
+    "term": "I hope you've had a successful start",
+    "ipa": "/aɪ həʊp juːv hæd ə səkˈses.fəl stɑːt/",
+    "category": "greeting",
+    "definition": "Hy vọng bạn đã có một khởi đầu thành công",
+    "context": "Hỏi thăm đồng nghiệp mới sau vài tuần đầu tiên nhận việc.",
+    "example_en": "Welcome back! I hope you've had a successful start in your new role.",
+    "example_vi": "Chào mừng trở lại! Hy vọng bạn đã có một khởi đầu thành công trong vai trò mới."
+  },
+  {
+    "id": "greet-34",
+    "term": "Let me introduce the rest of the team",
+    "ipa": "/let miː ˌɪn.trəˈdjuːs ðə rest ɒv ðə tiːm/",
+    "category": "greeting",
+    "definition": "Để tôi giới thiệu các thành viên còn lại của nhóm",
+    "context": "Dùng khi bạn là chủ trì giới thiệu thành viên của nhóm mình cho đối tác mới.",
+    "example_en": "Great to meet you. Now, let me introduce the rest of the team.",
+    "example_vi": "Rất vui được gặp anh. Bây giờ, để tôi giới thiệu các thành viên còn lại của nhóm."
+  },
+  {
+    "id": "greet-35",
+    "term": "We are thrilled to have you here",
+    "ipa": "/wiː ɑːr θrɪld tuː hæv juː hɪər/",
+    "category": "greeting",
+    "definition": "Chúng tôi vô cùng vui mừng chào đón anh/chị ở đây",
+    "context": "Lời chào nồng nhiệt nhất của nhóm/công ty dành cho khách hàng hoặc đối tác.",
+    "example_en": "Welcome to our design studio, we are thrilled to have you here.",
+    "example_vi": "Chào mừng đến với studio thiết kế của chúng tôi, chúng tôi vô cùng vui mừng được đón tiếp anh ở đây."
+  },
+  {
+    "id": "greet-36",
+    "term": "It's a pleasure to meet you virtually",
+    "ipa": "/ɪts ə ˈpleʒ.ər tuː miːt juː ˈvɜː.tʃu.ə.li/",
+    "category": "greeting",
+    "definition": "Rất vui được gặp anh/chị qua màn ảnh nhỏ",
+    "context": "Lời chào hiện đại lịch sự khi gặp đối tác lần đầu qua Zoom/Teams/Meet.",
+    "example_en": "Hi Jack, it's a pleasure to meet you virtually. Hope online calls work fine.",
+    "example_vi": "Chào Jack, rất vui được gặp anh qua màn ảnh nhỏ. Hy vọng cuộc gọi online hoạt động tốt."
+  },
+  {
+    "id": "greet-37",
+    "term": "I'm glad we got a chance to speak",
+    "ipa": "/aɪm ɡlæd wiː ɡɒt ə tʃɑːns tuː spiːk/",
+    "category": "greeting",
+    "definition": "Tôi rất vui vì chúng ta có cơ hội trò chuyện cùng nhau",
+    "context": "Thường dùng để mở đầu hoặc kết thúc cuộc trò chuyện ngắn hữu ích.",
+    "example_en": "It's been a busy day, but I'm glad we got a chance to speak.",
+    "example_vi": "Đã là một ngày bận rộn, nhưng tôi rất vui vì chúng ta có cơ hội trò chuyện cùng nhau."
+  },
+  {
+    "id": "greet-38",
+    "term": "How is business going on your end?",
+    "ipa": "/haʊ ɪz ˈbɪz.nɪs ˈɡəʊ.ɪŋ ɒn jɔːr end/",
+    "category": "greeting",
+    "definition": "Tình hình kinh doanh bên phía anh/chị thế nào?",
+    "context": "Hỏi thăm xã giao lịch sự về tình hình kinh doanh của công ty đối tác.",
+    "example_en": "It's been six months. How is business going on your end?",
+    "example_vi": "Đã sáu tháng rồi. Tình hình kinh doanh bên phía các anh thế nào rồi?"
+  },
+  {
+    "id": "greet-39",
+    "term": "I trust everything is going well with you",
+    "ipa": "/aɪ trʌst ˈev.ri.θɪŋ ɪz ˈɡəʊ.ɪŋ wel wɪð juː/",
+    "category": "greeting",
+    "definition": "Tôi tin là mọi thứ vẫn đang diễn ra tốt đẹp với bạn",
+    "context": "Lời chào xã giao lịch sự viết ở đầu các email công việc.",
+    "example_en": "Dear team, I trust everything is going well with the product validation step.",
+    "example_vi": "Thân chào cả đội, tôi tin là mọi thứ vẫn diễn ra tốt đẹp với bước xác thực sản phẩm."
+  },
+  {
+    "id": "greet-40",
+    "term": "It's great to put a face to the name",
+    "ipa": "/ɪts ɡreɪt tuː pʊt ə feɪs tuː ðə neɪm/",
+    "category": "greeting",
+    "definition": "Rất vui khi được đối mặt trực tiếp thay vì chỉ biết tên qua thư",
+    "context": "Câu nói xã giao thú vị khi gặp mặt trực tiếp người đã trao đổi qua email lâu ngày.",
+    "example_en": "We have worked together for months, it's great to put a face to the name.",
+    "example_vi": "Chúng ta đã làm việc cùng nhau nhiều tháng, thật tuyệt khi được gặp mặt trực tiếp thay vì chỉ biết tên."
+  },
+  {
+    "id": "greet-41",
+    "term": "Thank you for inviting me to join",
+    "ipa": "/θæŋk juː fɔːr ɪnˈvaɪ.tɪŋ miː tuː dʒɔɪn/",
+    "category": "greeting",
+    "definition": "Cảm ơn vì đã mời tôi tham gia cuộc thảo luận này",
+    "context": "Lời chào xã giao lịch sự khi bạn tham gia vào một dự án hoặc cuộc họp mới.",
+    "example_en": "Thank you for inviting me to join this session, I hope to add value.",
+    "example_vi": "Cảm ơn vì đã mời tôi tham gia buổi họp này, tôi hy vọng sẽ đóng góp được giá trị."
+  },
+  {
+    "id": "greet-42",
+    "term": "I hope you're keeping safe and well",
+    "ipa": "/aɪ həʊp jɔːr ˈkiː.pɪŋ seɪf ænd wel/",
+    "category": "greeting",
+    "definition": "Hy vọng bạn vẫn luôn an toàn và khỏe mạnh",
+    "context": "Mở đầu email thân thiện lịch sự.",
+    "example_en": "Hi John, I hope you're keeping safe and well during these turbulent times.",
+    "example_vi": "Chào John, hy vọng bạn vẫn luôn an toàn và khỏe mạnh trong những thời điểm bất ổn này."
+  },
+  {
+    "id": "greet-43",
+    "term": "Delighted to make your acquaintance",
+    "ipa": "/dɪˈlaɪ.tɪd tuː meɪk jɔːr əˈkweɪn.təns/",
+    "category": "greeting",
+    "definition": "Vô cùng vui mừng được làm quen với anh/chị",
+    "context": "Trang trọng hơn 'nice to meet you', tạo ấn tượng lịch thiệp tuyệt vời.",
+    "example_en": "Hello everyone, I am delighted to make your acquaintance today.",
+    "example_vi": "Xin chào mọi người, tôi vô cùng vui mừng được làm quen với mọi người ngày hôm nay."
+  },
+  {
+    "id": "greet-44",
+    "term": "How are things shaping up this quarter?",
+    "ipa": "/haʊ ɑːr θɪŋz ˈʃeɪ.pɪŋ ʌp ðɪs ˈkwɔː.tər/",
+    "category": "greeting",
+    "definition": "Tình hình quý này đang tiến triển thế nào rồi?",
+    "context": "Hỏi thăm xã giao về tiến độ kinh doanh định kỳ của đối tác.",
+    "example_en": "Hi Chris, how are things shaping up this quarter for the sales division?",
+    "example_vi": "Chào Chris, tình hình quý này của bộ phận bán hàng đang tiến triển thế nào rồi?"
+  },
+  {
+    "id": "greet-45",
+    "term": "I've been eager to meet you in person",
+    "ipa": "/aɪv biːn ˈiː.ɡər tuː miːt juː ɪn ˈpɜː.sən/",
+    "category": "greeting",
+    "definition": "Tôi đã rất nóng lòng được gặp mặt trực tiếp anh/chị",
+    "context": "Cách chào bày tỏ sự nhiệt huyết và tôn trọng đối phương khi gặp mặt.",
+    "example_en": "Finally we met, I've been eager to meet you in person.",
+    "example_vi": "Cuối cùng chúng ta cũng đã gặp nhau, tôi đã rất nóng lòng được gặp mặt trực tiếp anh."
+  },
+  {
+    "id": "greet-46",
+    "term": "Honor to welcome our guest speaker",
+    "ipa": "/ˈɒn.ər tuː ˈwel.kəm ˈaʊ.ər ɡest ˈspiː.kər/",
+    "category": "greeting",
+    "definition": "Vinh dự lớn khi được đón tiếp diễn giả khách mời của chúng ta",
+    "context": "Dùng khi MC giới thiệu và chào đón diễn giả chính trong buổi hội nghị.",
+    "example_en": "It is our honor to welcome our guest speaker from Google today.",
+    "example_vi": "Hôm nay là vinh dự lớn của chúng tôi khi được chào đón diễn giả khách mời đến từ Google."
+  },
+  {
+    "id": "greet-47",
+    "term": "How has your transition been so far?",
+    "ipa": "/haʊ hæz jɔːr trænˈzɪʃ.ən biːn səʊ fɑː/",
+    "category": "greeting",
+    "definition": "Quá trình chuyển giao công việc của bạn thế nào rồi?",
+    "context": "Hỏi thăm nhân viên mới hoặc người vừa chuyển bộ phận làm việc.",
+    "example_en": "Since relocating to this office, how has your transition been so far?",
+    "example_vi": "Kể từ khi chuyển sang văn phòng này, quá trình chuyển giao công việc của bạn thế nào rồi?"
+  },
+  {
+    "id": "greet-48",
+    "term": "We appreciate you joining us today",
+    "ipa": "/wiː əˈpriː.ʃi.eɪt juː ˈdʒɔɪ.nɪŋ ʌs təˈdeɪ/",
+    "category": "greeting",
+    "definition": "Chúng tôi trân trọng sự tham gia của anh/chị hôm nay",
+    "context": "Lời chào mở đầu lịch sự của chủ trì hội nghị dành cho khách mời.",
+    "example_en": "Thank you for joining. We appreciate you joining us today.",
+    "example_vi": "Cảm ơn vì đã tham gia. Chúng tôi trân trọng sự tham gia của anh hôm nay."
+  },
+  {
+    "id": "greet-49",
+    "term": "Real pleasure to reconnect with you",
+    "ipa": "/rɪəl ˈpleʒ.ər tuː ˌriː.kəˈnekt wɪð juː/",
+    "category": "greeting",
+    "definition": "Thực sự rất vui được kết nối lại với anh/chị",
+    "context": "Dùng khi chào hỏi đối tác cũ sau một thời gian dài chưa tương tác.",
+    "example_en": "Hi Amanda, it is a real pleasure to reconnect with you after the trade show.",
+    "example_vi": "Chào Amanda, thực sự rất vui được kết nối lại với chị sau hội chợ thương mại."
+  },
+  {
+    "id": "greet-50",
+    "term": "I'm looking forward to our collaboration",
+    "ipa": "/aɪm ˈlʊk.ɪŋ ˈfɔː.wəd tuː ˈaʊ.ər kəˈlæb.ə.reɪ.ʃən/",
+    "category": "greeting",
+    "definition": "Tôi rất trông đợi vào sự hợp tác của chúng ta sắp tới",
+    "context": "Câu kết thúc buổi chào hỏi xã giao cực kỳ chuẩn mực.",
+    "example_en": "Thank you for the warm welcome. I'm looking forward to our collaboration.",
+    "example_vi": "Cảm ơn lời chào đón nồng ấm. Tôi rất trông đợi vào sự hợp tác của chúng ta sắp tới."
+  },
+  {
+    "id": "meet-1",
+    "term": "Let's kick things off",
+    "ipa": "/let's kɪk θɪŋz ɒf/",
+    "category": "meeting",
+    "definition": "Hãy cùng bắt đầu cuộc họp/bắt đầu công việc nào",
+    "context": "Dùng để chính thức khai mạc cuộc họp một cách năng động và hiện đại.",
+    "example_en": "Everyone is here, so let's kick things off with the project update.",
+    "example_vi": "Mọi người đã có mặt đông đủ, hãy cùng bắt đầu cuộc họp bằng việc cập nhật dự án nào."
+  },
+  {
+    "id": "meet-2",
+    "term": "Establish the agenda",
+    "ipa": "/ɪˈstæb.lɪʃ ði əˈdʒen.də/",
+    "category": "meeting",
+    "definition": "Thống nhất lịch trình/nội dung họp hôm nay",
+    "context": "Nêu rõ các chủ đề sẽ thảo luận để cuộc họp đi đúng hướng và không lan man.",
+    "example_en": "First, let's establish the agenda for today's brainstorm session.",
+    "example_vi": "Đầu tiên, hãy thống nhất nội dung thảo luận cho buổi động não ngày hôm nay."
+  },
+  {
+    "id": "meet-3",
+    "term": "Table this discussion",
+    "ipa": "/ˈteɪ.bəl ðɪs dɪˈskʌʃ.ən/",
+    "category": "meeting",
+    "definition": "Tạm gác việc thảo luận chủ đề này lại để bàn sau",
+    "context": "Dùng khi một tranh luận đi quá sâu và tốn thời gian, cần hoãn lại để tiếp tục nội dung khác.",
+    "example_en": "We don't have enough data on hosting costs, so let's table this discussion.",
+    "example_vi": "Chúng ta chưa có đủ dữ liệu về chi phí máy chủ, vậy hãy tạm gác việc thảo luận chủ đề này lại."
+  },
+  {
+    "id": "meet-4",
+    "term": "Weigh in on",
+    "ipa": "/weɪ ɪn ɒn/",
+    "category": "meeting",
+    "definition": "Đưa ra ý kiến đóng góp, bày tỏ quan điểm về việc gì",
+    "context": "Lời mời gọi một ai đó đóng góp góc nhìn chuyên môn của họ.",
+    "example_en": "I'd like to ask our lead designer to weigh in on this color scheme.",
+    "example_vi": "Tôi muốn mời nhà thiết kế chính của chúng ta đưa ra ý kiến về cách phối màu này."
+  },
+  {
+    "id": "meet-5",
+    "term": "Play devil's advocate",
+    "ipa": "/pleɪ ˈdev.əlz ˈæd.və.keɪt/",
+    "category": "meeting",
+    "definition": "Đóng vai người phản biện/phản đối để tìm kẽ hở",
+    "context": "Đưa ra quan điểm trái chiều mang tính xây dựng để kiểm tra độ vững chắc của giải pháp.",
+    "example_en": "Let me play devil's advocate: what happens if the server goes down?",
+    "example_vi": "Để tôi đóng vai người phản biện nhé: điều gì xảy ra nếu máy chủ bị sập?"
+  },
+  {
+    "id": "meet-6",
+    "term": "Elaborate on",
+    "ipa": "/iˈlæb.ə.reɪt ɒn/",
+    "category": "meeting",
+    "definition": "Giải thích chi tiết hơn, làm rõ chi tiết về vấn đề gì",
+    "context": "Yêu cầu ai đó cung cấp thêm thông tin giải trình về một luận điểm sơ sài.",
+    "example_en": "Could you elaborate on the security measures you proposed?",
+    "example_vi": "Anh có thể giải thích chi tiết hơn về các biện pháp bảo mật mà anh đề xuất không?"
+  },
+  {
+    "id": "meet-7",
+    "term": "Recap what we've covered",
+    "ipa": "/ˈriː.kæp wɒt wiːv ˈkʌv.əd/",
+    "category": "meeting",
+    "definition": "Tóm tắt lại những gì chúng ta đã thảo luận",
+    "context": "Thường dùng ở cuối cuộc họp để thống nhất lại các điểm chính trước khi giải tán.",
+    "example_en": "Before we end, let's briefly recap what we've covered so far.",
+    "example_vi": "Trước khi kết thúc, hãy tóm tắt ngắn gọn lại những gì chúng ta đã bàn thảo cho đến nay."
+  },
+  {
+    "id": "meet-8",
+    "term": "Circle back to",
+    "ipa": "/ˈsɜː.kəl bæk tuː/",
+    "category": "meeting",
+    "definition": "Quay trở lại thảo luận một chủ đề trước đó sau",
+    "context": "Dùng để nhắc nhở nhóm quay lại điểm chưa được giải quyết dứt điểm.",
+    "example_en": "Let's circle back to the budget allocation after we talk about logistics.",
+    "example_vi": "Hãy quay trở lại thảo luận việc phân bổ ngân sách sau khi chúng ta nói về hậu cần."
+  },
+  {
+    "id": "meet-9",
+    "term": "Take ownership of this task",
+    "ipa": "/teɪk ˈəʊ.nə.ʃɪp ɒv ðɪs tɑːsk/",
+    "category": "meeting",
+    "definition": "Nhận trách nhiệm hoàn toàn làm đầu mối xử lý công việc này",
+    "context": "Khi phân chia công việc trong cuộc họp để tránh đùn đẩy trách nhiệm.",
+    "example_en": "Who is willing to take ownership of this action item and report next week?",
+    "example_vi": "Ai sẵn sàng nhận trách nhiệm làm đầu mối công việc này và báo cáo vào tuần tới?"
+  },
+  {
+    "id": "meet-10",
+    "term": "Get down to business",
+    "ipa": "/ɡet daʊn tuː ˈbɪz.nɪs/",
+    "category": "meeting",
+    "definition": "Đi thẳng vào vấn đề chính/bắt đầu làm việc nghiêm túc",
+    "context": "Chấm dứt việc trò chuyện tán gẫu đầu giờ để tập trung vào chương trình họp.",
+    "example_en": "Now that the coffee is served, let's get down to business.",
+    "example_vi": "Giờ thì đã có cà phê rồi, chúng ta hãy cùng đi thẳng vào vấn đề chính nào."
+  },
+  {
+    "id": "meet-11",
+    "term": "Reach a consensus",
+    "ipa": "/riːtʃ ə kənˈsen.səs/",
+    "category": "meeting",
+    "definition": "Đạt được sự thống nhất chung/đồng thuận toàn bộ",
+    "context": "Khi thảo luận các vấn đề quan trọng cần sự biểu quyết thống nhất của tất cả mọi người.",
+    "example_en": "We must discuss until we reach a consensus on the release date.",
+    "example_vi": "Chúng ta phải thảo luận cho đến khi đạt được sự thống nhất chung về ngày phát hành."
+  },
+  {
+    "id": "meet-12",
+    "term": "Keep things on track",
+    "ipa": "/kiːp θɪŋz ɒn træk/",
+    "category": "meeting",
+    "definition": "Giữ cho cuộc họp đi đúng hướng/không bị lệch chủ đề",
+    "context": "Nhiệm vụ của người chủ trì cuộc họp khi cuộc thảo luận bị phân tâm.",
+    "example_en": "Our time is limited, so please help me keep things on track.",
+    "example_vi": "Thời gian của chúng ta có hạn, vì vậy vui lòng giúp tôi giữ cuộc họp đi đúng hướng."
+  },
+  {
+    "id": "meet-13",
+    "term": "Point out that",
+    "ipa": "/pɔɪnt aʊt ðæt/",
+    "category": "meeting",
+    "definition": "Chỉ ra rằng/nhấn mạnh quan điểm rằng",
+    "context": "Giúp thu hút sự chú ý của mọi người vào một chi tiết/rủi ro quan trọng.",
+    "example_en": "I'd like to point out that the database migration might cause service downtime.",
+    "example_vi": "Tôi muốn chỉ ra rằng việc di chuyển cơ sở dữ liệu có thể gây gián đoạn dịch vụ."
+  },
+  {
+    "id": "meet-14",
+    "term": "Dive right in",
+    "ipa": "/daɪv raɪt ɪn/",
+    "category": "meeting",
+    "definition": "Bắt tay ngay vào phân tích chi tiết",
+    "context": "Chuyển nhanh từ phần chào hỏi xã giao sang chi tiết kỹ thuật/công việc phức tạp.",
+    "example_en": "No need for long introductions, let's dive right into the codebase analysis.",
+    "example_vi": "Không cần giới thiệu dài dòng, hãy bắt tay ngay vào phân tích mã nguồn nào."
+  },
+  {
+    "id": "meet-15",
+    "term": "Walk us through this",
+    "ipa": "/wɔːk ʌs θruː ðɪs/",
+    "category": "meeting",
+    "definition": "Dẫn dắt/trình bày chi tiết từng bước cho chúng tôi hiểu",
+    "context": "Yêu cầu lập trình viên hoặc chuyên viên demo giao diện hoặc luồng xử lý của hệ thống.",
+    "example_en": "Could you please walk us through the user registration workflow?",
+    "example_vi": "Bạn có thể dẫn dắt chúng tôi qua quy trình đăng ký người dùng được không?"
+  },
+  {
+    "id": "meet-16",
+    "term": "I take your point, but",
+    "ipa": "/aɪ teɪk jɔːr pɔɪnt bʌt/",
+    "category": "meeting",
+    "definition": "Tôi hiểu góc nhìn của bạn, tuy nhiên...",
+    "context": "Cách phản bác quan điểm lịch sự và chuyên nghiệp, tránh tạo xung đột.",
+    "example_en": "I take your point about security, but this feature is crucial for marketing.",
+    "example_vi": "Tôi hiểu góc nhìn của bạn về bảo mật, tuy nhiên tính năng này lại cực kỳ quan trọng cho tiếp thị."
+  },
+  {
+    "id": "meet-17",
+    "term": "Move on to the next item",
+    "ipa": "/muːv ɒn tuː ðə nekst ˈaɪ.təm/",
+    "category": "meeting",
+    "definition": "Chuyển sang nội dung tiếp theo trong lịch trình",
+    "context": "Dùng khi nội dung hiện tại đã được thống nhất hoặc kết luận xong.",
+    "example_en": "Since everyone agrees on the API structure, let's move on to the next item.",
+    "example_vi": "Vì mọi người đều đồng ý về cấu trúc API, hãy chuyển sang nội dung tiếp theo."
+  },
+  {
+    "id": "meet-18",
+    "term": "Running out of time",
+    "ipa": "/ˈrʌn.ɪŋ aʊt ɒv taɪm/",
+    "category": "meeting",
+    "definition": "Sắp hết thời gian họp rồi",
+    "context": "Cảnh báo khẩn trương để mọi người tập trung chốt kết luận nhanh chóng.",
+    "example_en": "We are running out of time, so let's vote on this immediately.",
+    "example_vi": "Chúng ta sắp hết thời gian họp rồi, vì vậy hãy bỏ phiếu biểu quyết ngay lập tức."
+  },
+  {
+    "id": "meet-19",
+    "term": "Wrap things up",
+    "ipa": "/ræp θɪŋz ʌp/",
+    "category": "meeting",
+    "definition": "Gói gọn/kết thúc cuộc họp lại",
+    "context": "Sử dụng khi đã thảo luận xong toàn bộ lịch trình và chuẩn bị giải tán.",
+    "example_en": "Let's wrap things up by assigning tasks to each developer.",
+    "example_vi": "Hãy kết thúc cuộc họp bằng cách phân chia công việc cho mỗi lập trình viên."
+  },
+  {
+    "id": "meet-20",
+    "term": "Raise a concern",
+    "ipa": "/reɪz ə kənˈsɜːn/",
+    "category": "meeting",
+    "definition": "Nêu lên một điểm lo ngại/quan ngại",
+    "context": "Cảnh báo rủi ro về tiến độ, tài chính hoặc kỹ thuật một cách lịch sự.",
+    "example_en": "I'd like to raise a concern regarding our server capacity during the sale.",
+    "example_vi": "Tôi muốn nêu lên một mối lo ngại liên quan đến dung lượng máy chủ trong đợt giảm giá."
+  },
+  {
+    "id": "meet-21",
+    "term": "Have any input on",
+    "ipa": "/hæv ˈen.i ˈɪn.pʊt ɒn/",
+    "category": "meeting",
+    "definition": "Có ý kiến phản hồi/đóng góp gì thêm về...",
+    "context": "Hỏi ý kiến của những người tham dự để đảm bảo không ai bị bỏ quên.",
+    "example_en": "Does the engineering team have any input on the product design?",
+    "example_vi": "Đội ngũ kỹ thuật có ý kiến phản hồi gì thêm về thiết kế sản phẩm không?"
+  },
+  {
+    "id": "meet-22",
+    "term": "Defer this to",
+    "ipa": "/dɪˈfɜːr ðɪs tuː/",
+    "category": "meeting",
+    "definition": "Hoãn nội dung này lại và chuyển giao cho...",
+    "context": "Chuyển chủ đề cho một cuộc họp sau hoặc cho một nhóm chuyên biệt tự xử lý riêng.",
+    "example_en": "Let's defer this database discussion to the backend architectural sync.",
+    "example_vi": "Hãy hoãn nội dung cơ sở dữ liệu này lại và chuyển sang buổi họp đồng bộ kiến trúc backend."
+  },
+  {
+    "id": "meet-23",
+    "term": "Sum up the main findings",
+    "ipa": "/sʌm ʌp ðə meɪn ˈfaɪn.dɪŋz/",
+    "category": "meeting",
+    "definition": "Tóm tắt lại các phát hiện/kết quả chính",
+    "context": "Thường dùng sau một đợt phân tích số liệu hoặc nghiên cứu trải nghiệm khách hàng.",
+    "example_en": "To sum up the main findings, users prefer the simple login flow.",
+    "example_vi": "Để tóm tắt lại các phát hiện chính, người dùng thích luồng đăng nhập đơn giản hơn."
+  },
+  {
+    "id": "meet-24",
+    "term": "Align expectations",
+    "ipa": "/əˈlaɪn ˌek.spekˈteɪ.ʃənz/",
+    "category": "meeting",
+    "definition": "Thống nhất kỳ vọng giữa các bên",
+    "context": "Đảm bảo khách hàng và đội ngũ kỹ thuật có cùng sự thấu hiểu về phạm vi dự án.",
+    "example_en": "We need this sync meeting to align expectations with the product owner.",
+    "example_vi": "Chúng ta cần cuộc họp đồng bộ này để thống nhất kỳ vọng với chủ sở hữu sản phẩm."
+  },
+  {
+    "id": "meet-25",
+    "term": "Keep this brief",
+    "ipa": "/kiːp ðɪs briːf/",
+    "category": "meeting",
+    "definition": "Trình bày thật ngắn gọn/súc tích",
+    "context": "Yêu cầu báo cáo nhanh chóng, tập trung các điểm mấu chốt.",
+    "example_en": "I'll keep this brief because I know everyone has another meeting next.",
+    "example_vi": "Tôi sẽ trình bày thật ngắn gọn vì tôi biết mọi người có cuộc họp khác ngay sau đây."
+  },
+  {
+    "id": "meet-26",
+    "term": "Fully on board with",
+    "ipa": "/ˈfʊl.i ɒn bɔːd wɪð/",
+    "category": "meeting",
+    "definition": "Hoàn toàn nhất trí/ủng hộ ý kiến hoặc kế hoạch",
+    "context": "Thể hiện sự cam kết ủng hộ tuyệt đối đối với một sáng kiến.",
+    "example_en": "The management is fully on board with refactoring the legacy codebase.",
+    "example_vi": "Ban quản lý hoàn toàn nhất trí với việc cấu trúc lại mã nguồn cũ."
+  },
+  {
+    "id": "meet-27",
+    "term": "Look at the big picture",
+    "ipa": "/lʊk æt ðə bɪɡ ˈpɪk.tʃər/",
+    "category": "meeting",
+    "definition": "Nhìn nhận bức tranh toàn cảnh/tổng thể vấn đề",
+    "context": "Kéo cuộc tranh luận vặt vãnh trở về mục tiêu chiến lược lâu dài của dự án.",
+    "example_en": "Instead of debating minor details, let's look at the big picture.",
+    "example_vi": "Thay vì tranh cãi các chi tiết nhỏ nhặt, chúng ta hãy nhìn nhận bức tranh toàn cảnh."
+  },
+  {
+    "id": "meet-28",
+    "term": "Look at the breakdown of",
+    "ipa": "/lʊk æt ðə ˈbreɪk.daʊn ɒv/",
+    "category": "meeting",
+    "definition": "Xem xét bảng phân tích chi tiết cơ cấu/cơ cấu chi phí",
+    "context": "Dùng khi bắt đầu đi sâu phân tích một biểu đồ hoặc bảng số liệu phức tạp.",
+    "example_en": "Now, let's look at the breakdown of server hosting costs for last month.",
+    "example_vi": "Bây giờ, chúng ta hãy cùng xem xét bảng phân tích chi tiết chi phí hosting máy chủ của tháng trước."
+  },
+  {
+    "id": "meet-29",
+    "term": "Outside the scope of this meeting",
+    "ipa": "/ˌaʊtˈsaɪd ðə skəʊp ɒv ðɪs ˈmiː.tɪŋ/",
+    "category": "meeting",
+    "definition": "Nằm ngoài phạm vi của cuộc họp hôm nay",
+    "context": "Chặn các thảo luận đi chệch khỏi chủ đề ban đầu.",
+    "example_en": "Marketing details are outside the scope of this backend design meeting.",
+    "example_vi": "Chi tiết tiếp thị nằm ngoài phạm vi của cuộc họp thiết kế backend hôm nay."
+  },
+  {
+    "id": "meet-30",
+    "term": "Lot of ground to cover",
+    "ipa": "/lɒt ɒv ɡraʊnd tuː ˈkʌv.ər/",
+    "category": "meeting",
+    "definition": "Có rất nhiều nội dung cần phải thảo luận",
+    "context": "Nhắc nhở nhóm khẩn trương vì cuộc họp có quá nhiều vấn đề lớn cần giải quyết.",
+    "example_en": "We only have an hour and we have a lot of ground to cover today.",
+    "example_vi": "Chúng ta chỉ có một tiếng và có rất nhiều nội dung cần giải quyết hôm nay."
+  },
+  {
+    "id": "meet-31",
+    "term": "Get your perspective",
+    "ipa": "/ɡet jɔːr pəˈspek.tɪv/",
+    "category": "meeting",
+    "definition": "Lắng nghe quan điểm/góc nhìn của bạn",
+    "context": "Hỏi thăm ý kiến đóng góp của một thành viên khác trong nhóm.",
+    "example_en": "Before deciding, I'd like to get your perspective on this workflow, Bob.",
+    "example_vi": "Trước khi quyết định, tôi muốn lắng nghe quan điểm của anh về quy trình này, Bob."
+  },
+  {
+    "id": "meet-32",
+    "term": "Look at the action items",
+    "ipa": "/lʊk æt ði ˈæk.ʃən ˈaɪ.təmz/",
+    "category": "meeting",
+    "definition": "Xem xét lại danh sách các đầu việc cụ thể cần làm",
+    "context": "Rà soát lại danh sách việc cần thực hiện được chốt từ cuộc họp.",
+    "example_en": "Let's review the notes and look at the action items for this week.",
+    "example_vi": "Hãy rà soát lại ghi chú và xem xét danh sách đầu việc cần làm của tuần này."
+  },
+  {
+    "id": "meet-33",
+    "term": "Echo what [Name] said",
+    "ipa": "/ˈek.əʊ wɒt ... sed/",
+    "category": "meeting",
+    "definition": "Hoàn toàn đồng tình với ý kiến của...",
+    "context": "Bày tỏ sự đồng thuận với luận điểm của đồng nghiệp để củng cố sức nặng.",
+    "example_en": "I'd like to echo what Tom said about simplifying the payment screen.",
+    "example_vi": "Tôi muốn đồng tình với ý kiến của Tom về việc đơn giản hóa màn hình thanh toán."
+  },
+  {
+    "id": "meet-34",
+    "term": "Brainstorm some ideas",
+    "ipa": "/ˈbreɪn.stɔːm sʌm aɪˈdɪəz/",
+    "category": "meeting",
+    "definition": "Cùng động não suy nghĩ các ý tưởng mới",
+    "context": "Bắt đầu giai đoạn tự do đề xuất sáng kiến trước khi chọn lọc.",
+    "example_en": "Let's brainstorm some ideas on how to improve user acquisition.",
+    "example_vi": "Hãy cùng động não suy nghĩ các ý tưởng về cách cải thiện thu hút người dùng mới."
+  },
+  {
+    "id": "meet-35",
+    "term": "Iron out the details",
+    "ipa": "/ˈaɪ.ən aʊt ðə ˈdiː.teɪlz/",
+    "category": "meeting",
+    "definition": "Thống nhất và làm rõ nốt các chi tiết cuối cùng",
+    "context": "Giải quyết nốt các khía cạnh nhỏ chưa thống nhất để hoàn thiện kế hoạch.",
+    "example_en": "The contract is mostly ready, we just need to iron out the details tomorrow.",
+    "example_vi": "Hợp đồng hầu như đã sẵn sàng, ngày mai chúng ta chỉ cần thống nhất nốt các chi tiết cuối cùng."
+  },
+  {
+    "id": "meet-36",
+    "term": "Call it a day",
+    "ipa": "/kɔːl ɪt ə deɪ/",
+    "category": "meeting",
+    "definition": "Hôm nay thế là đủ rồi/Có thể kết thúc công việc tại đây",
+    "context": "Tuyên bố nghỉ ngơi/kết thúc họp hành hoặc làm việc khi đã muộn.",
+    "example_en": "We've made great progress today. Let's call it a day.",
+    "example_vi": "Chúng ta đã tiến triển rất tốt hôm nay. Nghỉ ngơi ở đây thôi nào."
+  },
+  {
+    "id": "meet-37",
+    "term": "Get a status update on",
+    "ipa": "/ɡet ə ˈsteɪ.təs ʌpˈdeɪt ɒn/",
+    "category": "meeting",
+    "definition": "Cập nhật tình hình/tiến độ của...",
+    "context": "Hỏi thăm tiến độ công việc của một hạng mục cụ thể.",
+    "example_en": "Could we get a status update on the API integration progress?",
+    "example_vi": "Chúng ta có thể cập nhật tình hình về tiến độ tích hợp API được không?"
+  },
+  {
+    "id": "meet-38",
+    "term": "Clarify one thing",
+    "ipa": "/ˈklær.ɪ.faɪ wʌn θɪŋ/",
+    "category": "meeting",
+    "definition": "Làm rõ thêm một điểm này",
+    "context": "Dùng trước khi hỏi một câu làm sáng tỏ thông tin chưa hiểu.",
+    "example_en": "Before we proceed, I'd like to clarify one thing about the server cost.",
+    "example_vi": "Trước khi tiếp tục, tôi muốn làm rõ một điểm về chi phí máy chủ."
+  },
+  {
+    "id": "meet-39",
+    "term": "Narrow down our options",
+    "ipa": "/ˈnær.ə.ti daʊn ˈaʊ.ər ˈɒp.ʃənz/",
+    "category": "meeting",
+    "definition": "Thu hẹp danh sách các lựa chọn khả thi",
+    "context": "Rút gọn danh sách các ý kiến từ brainstorm để đưa ra quyết định cuối cùng.",
+    "example_en": "We have ten ideas, but we must narrow down our options to the top three.",
+    "example_vi": "Chúng ta có mười ý tưởng, nhưng chúng ta phải thu hẹp lựa chọn xuống ba cái tốt nhất."
+  },
+  {
+    "id": "meet-40",
+    "term": "Schedule a follow-up",
+    "ipa": "/ˈʃed.juːl ə ˈfɒl.əʊ.ʌp/",
+    "category": "meeting",
+    "definition": "Lên lịch cho cuộc họp theo dõi tiếp theo",
+    "context": "Dành cho việc kiểm tra tiến độ của các hành động đã phân công.",
+    "example_en": "We should schedule a follow-up meeting in two weeks to review progress.",
+    "example_vi": "Chúng ta nên lên lịch cuộc họp theo dõi tiếp theo trong hai tuần nữa để đánh giá tiến độ."
+  },
+  {
+    "id": "meet-41",
+    "term": "Beg to differ",
+    "ipa": "/beɡ tuː ˈdɪf.ər/",
+    "category": "meeting",
+    "definition": "Xin phép được đưa ra ý kiến khác/không đồng tình",
+    "context": "Văn phong phản biện vô cùng lịch sự và học thuật.",
+    "example_en": "I beg to differ; according to the logs, server speed is not the issue.",
+    "example_vi": "Tôi xin phép có ý kiến khác; dựa theo các bản ghi log, tốc độ máy chủ không phải là vấn đề."
+  },
+  {
+    "id": "meet-42",
+    "term": "Keep our eyes on the ball",
+    "ipa": "/kiːp ˈaʊ.ər aɪz ɒn ðə bɔːl/",
+    "category": "meeting",
+    "definition": "Tập trung cao độ vào mục tiêu cốt lõi của công việc",
+    "context": "Nhắc nhở nhóm không bị phân tâm bởi các đề xuất thứ yếu.",
+    "example_en": "With the release date coming, we must keep our eyes on the ball.",
+    "example_vi": "Với ngày phát hành đang cận kề, chúng ta phải tập trung cao độ vào mục tiêu cốt lõi."
+  },
+  {
+    "id": "meet-43",
+    "term": "Brings us to the next point",
+    "ipa": "/brɪŋz ʌs tuː ðə nekst pɔɪnt/",
+    "category": "meeting",
+    "definition": "Dẫn dắt chúng ta đến nội dung tiếp theo",
+    "context": "Từ nối dẫn dắt chuyển tiếp chủ đề mượt mà khi trình bày dự án.",
+    "example_en": "That agreement brings us to the next point: the marketing budget.",
+    "example_vi": "Sự đồng thuận đó dẫn dắt chúng ta đến nội dung tiếp theo: ngân sách tiếp thị."
+  },
+  {
+    "id": "meet-44",
+    "term": "Bridge the gap",
+    "ipa": "/brɪdʒ ðə ɡæp/",
+    "category": "meeting",
+    "definition": "Thu hẹp khoảng cách/kết nối sự khác biệt",
+    "context": "Dùng khi tìm giải pháp hòa giải bất đồng hoặc kết nối hai hệ thống khác biệt.",
+    "example_en": "We need to build an adapter to bridge the gap between these two systems.",
+    "example_vi": "Chúng ta cần xây dựng một bộ tiếp hợp để kết nối sự khác biệt giữa hai hệ thống này."
+  },
+  {
+    "id": "meet-45",
+    "term": "Yield the floor to",
+    "ipa": "/jiːld ðə flɔːr tuː/",
+    "category": "meeting",
+    "definition": "Nhường lời phát biểu/sân khấu lại cho...",
+    "context": "Nhường quyền phát biểu cho người tiếp theo khi bạn kết thúc phần trình bày.",
+    "example_en": "I have finished. Now, I'd like to yield the floor to our CFO.",
+    "example_vi": "Tôi đã trình bày xong. Bây giờ, tôi muốn nhường lời phát biểu lại cho giám đốc tài chính."
+  },
+  {
+    "id": "meet-46",
+    "term": "Play it by ear",
+    "ipa": "/pleɪ ɪt baɪ ɪər/",
+    "category": "meeting",
+    "definition": "Tùy cơ ứng biến/đến đâu hay đến đó",
+    "context": "Dùng khi chưa có kế hoạch cụ thể do thiếu thông tin, cần thích ứng theo tình hình thực tế.",
+    "example_en": "Since the client hasn't sent requirements, we will have to play it by ear.",
+    "example_vi": "Vì khách hàng chưa gửi yêu cầu, chúng ta sẽ phải tùy cơ ứng biến thôi."
+  },
+  {
+    "id": "meet-47",
+    "term": "Stick to the agenda",
+    "ipa": "/stɪk tuː ði əˈdʒen.də/",
+    "category": "meeting",
+    "definition": "Bám sát theo đúng nội dung lịch trình họp",
+    "context": "Lời nhắc nhở mọi người không bàn luận lan man sang chuyện ngoài lề.",
+    "example_en": "We are getting distracted, please let's stick to the agenda.",
+    "example_vi": "Chúng ta đang bị xao lãng rồi, vui lòng hãy bám sát lịch trình cuộc họp nào."
+  },
+  {
+    "id": "meet-48",
+    "term": "Conscious of the time",
+    "ipa": "/ˈkɒn.ʃəs ɒv ðə taɪm/",
+    "category": "meeting",
+    "definition": "Ý thức được thời gian/chú ý thời gian họp hạn hẹp",
+    "context": "Đẩy nhanh tiến độ bàn luận vì sắp hết giờ.",
+    "example_en": "I'm conscious of the time, so I will get straight to the results.",
+    "example_vi": "Ý thức được thời gian có hạn, tôi sẽ đi thẳng vào kết quả đạt được."
+  },
+  {
+    "id": "meet-49",
+    "term": "Put this into perspective",
+    "ipa": "/pʊt ðɪs ˈɪn.tuː pəˈspek.tɪv/",
+    "category": "meeting",
+    "definition": "So sánh/đưa vấn đề về đúng bản chất quy mô để đánh giá",
+    "context": "Phân tích một số liệu bằng cách đối chiếu với một số liệu quen thuộc khác.",
+    "example_en": "To put this cost into perspective, it is less than our weekly coffee budget.",
+    "example_vi": "Để so sánh chi phí này dễ hình dung, nó còn ít hơn ngân sách cà phê hàng tuần của chúng ta."
+  },
+  {
+    "id": "meet-50",
+    "term": "Extend our appreciation to",
+    "ipa": "/ɪkˈstend ˈaʊ.ər əˌpriː.ʃiˈeɪ.ʃən tuː/",
+    "category": "meeting",
+    "definition": "Gửi lời cảm ơn chân thành/sâu sắc đến...",
+    "context": "Lời cảm ơn trang trọng nhất khi khép lại buổi họp gửi đến các đối tác quan trọng.",
+    "example_en": "Finally, I'd like to extend our appreciation to everyone who made this work.",
+    "example_vi": "Cuối cùng, tôi muốn gửi lời cảm ơn chân thành đến tất cả những ai đã đóng góp làm nên thành quả này."
+  }
+]
