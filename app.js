@@ -42,7 +42,20 @@
 
             const storedVocab = localStorage.getItem('b2_booster_vocab_v2');
             if (storedVocab) {
-                vocabularies = JSON.parse(storedVocab);
+                const parsedVocab = JSON.parse(storedVocab);
+                // Merge new default items from JSON database that don't exist in localStorage
+                const storedIds = new Set(parsedVocab.map(item => item.id));
+                const newItems = defaultVocabulary.filter(item => !storedIds.has(item.id)).map(item => ({
+                    ...item,
+                    status: 'new'
+                }));
+                
+                if (newItems.length > 0) {
+                    vocabularies = [...parsedVocab, ...newItems];
+                    saveToLocalStorage();
+                } else {
+                    vocabularies = parsedVocab;
+                }
             } else if (defaultVocabulary.length > 0) {
                 vocabularies = defaultVocabulary.map(item => ({
                     ...item,
