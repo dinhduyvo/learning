@@ -10,6 +10,7 @@
         let isFlipped = false;
         let currentCategory = 'all';
         let currentViewMode = 'flashcard'; // 'flashcard' or 'quiz'
+        let isAutoSpeakEnabled = false;
 
         // Quiz specific state
         let currentQuizIndex = 0;
@@ -21,9 +22,11 @@
         // Initialize App on Window Load
         window.onload = async function() {
             await initDatabase();
+            initAutoSpeak();
             applyCategoryFilter();
             renderStats();
             setupKeyboardShortcuts();
+            setupTouchGestures();
         };
 
         // Load data from localStorage or fallback to default JSON file fetch
@@ -216,6 +219,11 @@
             backContext.textContent = activeWord.context || "";
             backExEn.textContent = `"${activeWord.example_en}"`;
             backExVi.textContent = `(${activeWord.example_vi})`;
+
+            if (isAutoSpeakEnabled && filteredVocab.length > 0) {
+                window.speechSynthesis.cancel();
+                speakCurrentWord();
+            }
         }
 
         function flipCard() {
@@ -231,16 +239,58 @@
 
         function prevCard() {
             if (filteredVocab.length <= 1) return;
-            currentCardIndex = (currentCardIndex - 1 + filteredVocab.length) % filteredVocab.length;
-            renderCurrentCard();
-            updateCardCounter();
+            animateCardTransition('prev');
         }
 
         function nextCard() {
             if (filteredVocab.length <= 1) return;
-            currentCardIndex = (currentCardIndex + 1) % filteredVocab.length;
-            renderCurrentCard();
-            updateCardCounter();
+            animateCardTransition('next');
+        }
+
+        function animateCardTransition(direction) {
+            const cardEl = document.getElementById('flashcard');
+            if (!cardEl) return;
+
+            // 1. Add fade-out and slide-out styles
+            cardEl.style.transition = 'transform 0.15s ease-in, opacity 0.15s ease-in';
+            cardEl.style.opacity = '0';
+            
+            if (direction === 'next') {
+                cardEl.style.transform = isFlipped ? 'rotateY(180deg) translateX(-80px) scale(0.95)' : 'translateX(-80px) scale(0.95)';
+            } else {
+                cardEl.style.transform = isFlipped ? 'rotateY(180deg) translateX(80px) scale(0.95)' : 'translateX(80px) scale(0.95)';
+            }
+
+            // 2. After slide-out, change data and prepare slide-in
+            setTimeout(() => {
+                // Apply data change
+                if (direction === 'next') {
+                    currentCardIndex = (currentCardIndex + 1) % filteredVocab.length;
+                } else {
+                    currentCardIndex = (currentCardIndex - 1 + filteredVocab.length) % filteredVocab.length;
+                }
+                
+                isFlipped = false; // Reset flip state so it starts face-up
+                renderCurrentCard();
+                updateCardCounter();
+
+                // Instantly place it at the opposite slide-in position
+                cardEl.style.transition = 'none';
+                cardEl.style.opacity = '0';
+                if (direction === 'next') {
+                    cardEl.style.transform = 'translateX(80px) scale(0.95)';
+                } else {
+                    cardEl.style.transform = 'translateX(-80px) scale(0.95)';
+                }
+
+                // Force layout reflow
+                cardEl.offsetHeight;
+
+                // 3. Smooth slide-in to center
+                cardEl.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out';
+                cardEl.style.opacity = '1';
+                cardEl.style.transform = 'none';
+            }, 150);
         }
 
         function updateCardCounter() {
@@ -583,4 +633,71 @@
             if (isDrawerOpen) {
                 toggleMobileDrawer();
             }
+        }
+
+        // Auto-speak configuration controller
+        function initAutoSpeak() {
+            const stored = localStorage.getItem('b2_booster_autospeak');
+            if (stored !== null) {
+                isAutoSpeakEnabled = JSON.parse(stored);
+            } else {
+                isAutoSpeakEnabled = false; // default to disabled/off
+            }
+            const checkbox = document.getElementById('toggle-autospeak');
+            if (checkbox) {
+                checkbox.checked = isAutoSpeakEnabled;
+            }
+        }
+
+        function toggleAutoSpeak(enabled) {
+            isAutoSpeakEnabled = enabled;
+            localStorage.setItem('b2_booster_autospeak', JSON.stringify(enabled));
+            showToast(enabled ? "Đã bật tự động phát âm 🔊" : "Đã tắt tự động phát âm 🔇");
+        }
+
+        // Setup Touch Swipe Gestures for Mobile
+        function setupTouchGestures() {
+            const container = document.getElementById('flashcard-container');
+            if (!container) return;
+
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let touchEndX = 0;
+            let touchEndY = 0;
+            let swipeOccurred = false;
+
+            container.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].clientX;
+                touchStartY = e.changedTouches[0].clientY;
+                swipeOccurred = false;
+            }, { passive: true });
+
+            container.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].clientX;
+                touchEndY = e.changedTouches[0].clientY;
+                
+                const diffX = touchEndX - touchStartX;
+                const diffY = touchEndY - touchStartY;
+                
+                // Horizontal swipe check
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                    swipeOccurred = true;
+                    if (diffX < 0) {
+                        // Swipe Left -> Next card
+                        nextCard();
+                    } else {
+                        // Swipe Right -> Prev card
+                        prevCard();
+                    }
+                }
+            }, { passive: true });
+
+            // Override click behavior to check if a swipe occurred
+            container.onclick = function(e) {
+                if (swipeOccurred) {
+                    swipeOccurred = false;
+                    return;
+                }
+                flipCard();
+            };
         }
