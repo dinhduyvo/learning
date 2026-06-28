@@ -701,3 +701,55 @@
                 flipCard();
             };
         }
+
+        // Export/Import user progress & custom vocabulary
+        function exportUserData() {
+            try {
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(vocabularies));
+                const downloadAnchor = document.createElement('a');
+                downloadAnchor.setAttribute("href", dataStr);
+                downloadAnchor.setAttribute("download", `b2_booster_backup_${Date.now()}.json`);
+                document.body.appendChild(downloadAnchor);
+                downloadAnchor.click();
+                downloadAnchor.remove();
+                showToast("Đã xuất dữ liệu thành công! 💾");
+            } catch (err) {
+                console.error(err);
+                showToast("Lỗi xuất dữ liệu!", 4000);
+            }
+        }
+
+        function importUserData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (Array.isArray(imported)) {
+                        // Validate basic shape
+                        const isValid = imported.every(item => item.id && item.term && item.definition);
+                        if (!isValid) {
+                            showToast("File backup không đúng định dạng từ vựng!", 4000);
+                            return;
+                        }
+                        
+                        vocabularies = imported;
+                        saveToLocalStorage();
+                        
+                        // Sync & update interface
+                        applyCategoryFilter();
+                        renderStats();
+                        showToast("Đã khôi phục dữ liệu thành công! 🎉");
+                    } else {
+                        showToast("File khôi phục không đúng cấu trúc dạng danh sách.", 4000);
+                    }
+                } catch (err) {
+                    console.error(err);
+                    showToast("Lỗi đọc file khôi phục dữ liệu!", 4000);
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = ""; // Reset file input
+        }
